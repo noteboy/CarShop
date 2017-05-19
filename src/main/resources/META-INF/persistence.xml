@@ -21,7 +21,7 @@
             <!-- 数据库连接的用户名 -->
             <property name="hibernate.connection.username" value="root"/>
             <!-- 数据库连接的密码 -->
-            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.connection.password" value="liuxiaolong"/>
             <!-- 显示SQL语句 -->
             <property name="hibernate.show_sql" value="true"/>
 
