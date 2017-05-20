@@ -1,3 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
 <!--[if IE 9]>					<html class="ie9 no-js" lang="en">     <![endif]-->
@@ -7,7 +9,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-	<title>Car Dealer | All Listings</title>
+	<title>首页</title>
 
 	<meta name="description" content="" />
 	<meta name="author" content="" />
@@ -17,6 +19,7 @@
 	<link rel="stylesheet" href="css/skeleton.css" media="screen" />
 	<link rel="stylesheet" href="css/flexslider.css" media="screen" />
 	<link rel="stylesheet" href="css/jquery.fancybox.css" media="screen" />
+
 	<!-- HTML5 Shiv + detect touch events -->
 	<script type="text/javascript" src="js/modernizr.custom.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
@@ -32,14 +35,14 @@
 
 		<div class="widget-container widget_search">
 
-			<span class="call"><span>+1 234</span> 567-8901</span><br />
+			<!-- <span class="call"><span>+1 234</span> 567-8901</span><br />
 
-			<span class="adds">12 Street, Los Angeles, CA, 94101</span>
+			<span class="adds">12 Street, Los Angeles, CA, 94101</span> -->
 
 			<form action="#" id="searchform" method="get" />
 
 				<p>
-					<input type="text" id="s" placeholder="Search" />
+					<input type="text" id="s" placeholder="搜索" />
 					<button type="submit" id="searchsubmit"></button>
 				</p>
 
@@ -50,10 +53,10 @@
 		<nav id="navigation" class="navigation">
 
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li class="current-menu-item"><a href="all-listings.html">Browse By</a>
+				<li class="current-menu-item"><a href="index.html"></a></li>
+				<li><a href="all-listings.html">Browse By</a>
 					<ul>
-						<li class="current-menu-item"><a href="all-listings.html">All Listings</a></li>
+						<li><a href="all-listings.html">All Listings</a></li>
 						<li><a href="#">Manufacturer</a>
 							<ul>
 								<li><a href="one-products.html">Aston Martin</a></li>
@@ -100,15 +103,197 @@
 		</nav><!--/ #navigation-->
 
 	</header><!--/ #header-->
-
+	<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >Website Template</a></div>
 	<!-- - - - - - - - - - - - - - end Header - - - - - - - - - - - - - - - - -->
 
+
+	<!-- - - - - - - - - - - - - - Top Panel - - - - - - - - - - - - - - - - -->
+
+	<div class="top-panel clearfix">
+
+		<!-- - - - - - - - - - - Slider - - - - - - - - - - - - - -->
+
+		<div id="slider" class="flexslider clearfix">
+
+			<ul class="slides">
+
+				<li>
+					<img src="images/sliders/slide-1.jpg" alt="" />
+
+					<div class="caption">
+						<div class="caption-entry">
+
+							<dl class="auto-detailed clearfix">
+								<dt><span class="model">2005 Shevrolet</span></dt>
+								<dd class="media-hidden"><b>1.8 XRS Sedan</b></dd>
+								<dd class="media-hidden"><b>36000 Miles</b></dd>
+								<dd><span class="heading">$25896</span></dd>
+							</dl><!--/ .auto-detailed-->
+
+							<a href="#" class="button orange">Details &raquo;</a>
+
+						</div><!--/ .caption-entry-->
+					</div><!--/ .caption-->
+				</li>
+				<li>
+					<img src="images/sliders/slide-2.jpg" alt="" />
+
+					<div class="caption">
+						<div class="caption-entry">
+
+							<dl class="auto-detailed clearfix">
+								<dt><span class="model">2012 BMW</span></dt>
+								<dd class="media-hidden"><b>1.8 XRS Sedan</b></dd>
+								<dd class="media-hidden"><b>36000 Miles</b></dd>
+								<dd><span class="heading">$25896</span></dd>
+							</dl><!--/ .auto-detailed-->
+
+							<a href="#" class="button orange">Details &raquo;</a>
+
+						</div><!--/ .caption-entry-->
+					</div><!--/ .caption-->
+				</li>
+				<li>
+					<img src="images/sliders/slide-3.jpg" alt="" />
+
+					<div class="caption">
+						<div class="caption-entry">
+
+							<dl class="auto-detailed clearfix">
+								<dt><span class="model">2010 Subaru</span></dt>
+								<dd class="media-hidden"><b>1.8 XRS Sedan</b></dd>
+								<dd class="media-hidden"><b>36000 Miles</b></dd>
+								<dd><span class="heading">$25896</span></dd>
+							</dl><!--/ .auto-detailed-->
+
+							<a href="#" class="button orange">Details &raquo;</a>
+
+						</div><!--/ .caption-entry-->
+					</div><!--/ .caption-->
+				</li>
+				<li>
+					<img src="images/sliders/slide-4.jpg" alt="" />
+
+					<div class="caption">
+						<div class="caption-entry">
+
+							<dl class="auto-detailed clearfix">
+								<dt><span class="model">2005 Honda</span></dt>
+								<dd class="media-hidden"><b>1.8 XRS Sedan</b></dd>
+								<dd class="media-hidden"><b>36000 Miles</b></dd>
+								<dd><span class="heading">$25896</span></dd>
+							</dl><!--/ .auto-detailed-->
+
+							<a href="#" class="button orange">Details &raquo;</a>
+
+						</div><!--/ .caption-entry-->
+					</div><!--/ .caption-->
+				</li>
+				<li>
+					<img src="images/sliders/slide-5.jpg" alt="" />
+
+					<div class="caption">
+						<div class="caption-entry">
+
+							<dl class="auto-detailed clearfix">
+								<dt><span class="model">2005 Honda</span></dt>
+								<dd class="media-hidden"><b>1.8 XRS Sedan</b></dd>
+								<dd class="media-hidden"><b>36000 Miles</b></dd>
+								<dd><span class="heading">$25896</span></dd>
+							</dl><!--/ .auto-detailed-->
+
+							<a href="#" class="button orange">Details &raquo;</a>
+
+						</div><!--/ .caption-entry-->
+					</div><!--/ .caption-->
+				</li>
+
+			</ul><!--/ .slides-->
+
+		</div><!--/ #slider-->
+
+		<!-- - - - - - - - - - - end Slider - - - - - - - - - - - - - -->
+
+		<!-- - - - - - - - - - - Search Panel - - - - - - - - - - - - - -->
+
+		<div class="widget_custom_search">
+
+			<h3 class="widget-title">Quick Search</h3>
+
+			<form action="/" id="boxpanel" class="form-panel" />
+
+				<fieldset>
+					<label for="manufacturer">Manufacturer:</label>
+					<select id="manufacturer" name="manufacturer">
+						<option value="0" />Any
+						<option value="1" />Lorem
+						<option value="2" />Ipsum
+					</select>
+				</fieldset>
+
+				<fieldset>
+					<label for="minprice">Min Price:</label>
+					<select id="minprice" name="minprice">
+						<option value="0" />No min
+						<option value="1" />Lorem
+						<option value="2" />Ipsum
+					</select>
+				</fieldset>
+
+				<fieldset>
+					<label for="maxprice">Max Price:</label>
+					<select id="maxprice" name="maxprice">
+						<option value="0" />No max
+						<option value="1" />Lorem
+						<option value="2" />Ipsum
+					</select>
+				</fieldset>
+
+				<fieldset>
+					<label for="trans">Trans:</label>
+					<select id="trans" name="trans">
+						<option value="0" />Any
+						<option value="1" />Lorem
+						<option value="2" />Ipsum
+					</select>
+				</fieldset>
+
+				<fieldset>
+					<label for="mileage">Mileage:</label>
+					<select id="mileage" name="mileage">
+						<option value="0" />Any
+						<option value="1" />Lorem
+						<option value="2" />Ipsum
+					</select>
+				</fieldset>
+
+				<fieldset>
+					<label for="bodytype">Body Type:</label>
+					<select id="bodytype" name="bodytype">
+						<option value="0" />Any
+						<option value="1" />Lorem
+						<option value="2" />Ipsum
+					</select>
+				</fieldset>
+
+				<div class="clear"></div>
+				<button id="submitSearch" class="submit-search" type="submit">Search</button>
+
+			</form><!--/ .form-panel-->
+
+		</div><!--/ .main-search-panel-->
+
+		<!-- - - - - - - - - - end Search Panel - - - - - - - - - - - - -->
+
+	</div><!--/ .top-panel-->
+
+	<!-- - - - - - - - - - - - - end Top Panel - - - - - - - - - - - - - - - -->
 
 	<div class="main">
 
 		<!-- - - - - - - - - - - - - - - Container - - - - - - - - - - - - - - - - -->
 
-		<section class="container sbl clearfix">
+		<section class="container sbr clearfix">
 
 			<!-- - - - - - - - - - - - - - - Content - - - - - - - - - - - - - - - - -->
 
@@ -116,16 +301,16 @@
 
 				<div class="recent-list-cars">
 
-					<h3 class="widget-title"><span>Recent</span> Automobiles</h3>
+					<h3 class="widget-title">Recent Automobiles</h3>
 
-					<ul class="recent-list-cars clearfix">
+					<ul class="clearfix">
 
 						<li>
-							<a href="one-products.html" class="single-image picture">
+							<a href="#" class="single-image video picture">
 								<img src="images/temp/thumb-1.jpg" alt="" />
 							</a>
 
-							<a href="one-products.html" class="list-meta">
+							<a href="#" class="list-meta">
 								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
 							</a>
 
@@ -135,17 +320,17 @@
 								<b>23000 Miles</b>
 							</div><!--/ .detailed-->
 
-							<a href="one-products.html" class="button orange">Details</a>
+							<a href="#" class="button orange">Details</a>
 							<label class="compare"><input type="checkbox" />Compare</label>
 
 						</li>
 
 						<li>
-							<a href="one-products.html" class="single-image picture">
+							<a href="#" class="single-image picture video">
 								<img src="images/temp/thumb-2.jpg" alt="" />
 							</a>
 
-							<a href="one-products.html" class="list-meta">
+							<a href="#" class="list-meta">
 								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
 							</a>
 
@@ -155,17 +340,17 @@
 								<b>23000 Miles</b>
 							</div><!--/ .detailed-->
 
-							<a href="one-products.html" class="button orange">Details</a>
+							<a href="#" class="button orange">Details</a>
 							<label class="compare"><input type="checkbox" />Compare</label>
 
 						</li>
 
 						<li>
-							<a href="one-products.html" class="single-image picture video">
+							<a href="#" class="single-image picture">
 								<img src="images/temp/thumb-3.jpg" alt="" />
 							</a>
 
-							<a href="one-products.html" class="list-meta">
+							<a href="#" class="list-meta">
 								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
 							</a>
 
@@ -175,17 +360,17 @@
 								<b>23000 Miles</b>
 							</div><!--/ .detailed-->
 
-							<a href="one-products.html" class="button orange">Details</a>
+							<a href="#" class="button orange">Details</a>
 							<label class="compare"><input type="checkbox" />Compare</label>
 
 						</li>
 
 						<li>
-							<a href="one-products.html" class="single-image picture">
+							<a href="#" class="single-image">
 								<img src="images/temp/no-thumb.jpg" alt="" />
 							</a>
 
-							<a href="one-products.html" class="list-meta">
+							<a href="#" class="list-meta">
 								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
 							</a>
 
@@ -195,17 +380,17 @@
 								<b>23000 Miles</b>
 							</div><!--/ .detailed-->
 
-							<a href="one-products.html" class="button orange">Details</a>
+							<a href="#" class="button orange">Details</a>
 							<label class="compare"><input type="checkbox" />Compare</label>
 
 						</li>
 
 						<li>
-							<a href="one-products.html" class="single-image picture video">
+							<a href="#" class="single-image picture">
 								<img src="images/temp/thumb-4.jpg" alt="" />
 							</a>
 
-							<a href="one-products.html" class="list-meta">
+							<a href="#" class="list-meta">
 								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
 							</a>
 
@@ -215,17 +400,17 @@
 								<b>23000 Miles</b>
 							</div><!--/ .detailed-->
 
-							<a href="one-products.html" class="button orange">Details</a>
+							<a href="#" class="button orange">Details</a>
 							<label class="compare"><input type="checkbox" />Compare</label>
 
 						</li>
 
 						<li>
-							<a href="one-products.html" class="single-image picture">
+							<a href="#" class="single-image picture">
 								<img src="images/temp/thumb-5.jpg" alt="" />
 							</a>
 
-							<a href="one-products.html" class="list-meta">
+							<a href="#" class="list-meta">
 								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
 							</a>
 
@@ -235,84 +420,16 @@
 								<b>23000 Miles</b>
 							</div><!--/ .detailed-->
 
-							<a href="one-products.html" class="button orange">Details</a>
+							<a href="#" class="button orange">Details</a>
 							<label class="compare"><input type="checkbox" />Compare</label>
 
 						</li>
 
-						<li>
-							<a href="one-products.html" class="single-image picture">
-								<img src="images/temp/thumb-5.jpg" alt="" />
-							</a>
+					</ul>
 
-							<a href="one-products.html" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
-
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
-							</div><!--/ .detailed-->
-
-							<a href="one-products.html" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
-
-						</li>
-
-						<li>
-							<a href="one-products.html" class="single-image picture">
-								<img src="images/temp/no-thumb.jpg" alt="" />
-							</a>
-
-							<a href="one-products.html" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
-
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
-							</div><!--/ .detailed-->
-
-							<a href="one-products.html" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
-
-						</li>
-
-						<li>
-							<a href="one-products.html" class="single-image picture video">
-								<img src="images/temp/thumb-4.jpg" alt="" />
-							</a>
-
-							<a href="one-products.html" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
-
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
-							</div><!--/ .detailed-->
-
-							<a href="one-products.html" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
-
-						</li>
-
-					</ul><!--/ .recent-list-cars-->
+					<a href="#" class="see">See all automobiles</a>
 
 				</div><!--/ .recent-list-cars-->
-
-				<div class="wp-pagenavi clearfix">
-
-					<span class="pages">Page 1 of 2</span>
-					<a class="prevpostslink" href="#"></a>
-					<span class="current">1</span>
-					<a class="page" href="#">2</a>
-					<a class="nextpostslink" href="#"></a>
-
-				</div><!--/ .wp-pagenavi-->
 
 			</section><!--/ #content-->
 
@@ -323,81 +440,10 @@
 
 			<aside id="sidebar" class="four columns">
 
-
-				<div class="widget-container widget_custom_search">
-
-					<h3 class="widget-title">Quick Search</h3>
-
-					<form action="/" id="boxpanel" class="form-panel" />
-
-						<fieldset>
-							<label for="manufacturer">Manufacturer:</label>
-							<select id="manufacturer" name="manufacturer">
-								<option value="0" />Any
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
-
-						<fieldset>
-							<label for="minprice">Min Price:</label>
-							<select id="minprice" name="minprice">
-								<option value="0" />No min
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
-
-						<fieldset>
-							<label for="maxprice">Max Price:</label>
-							<select id="maxprice" name="maxprice">
-								<option value="0" />No max
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
-
-						<fieldset>
-							<label for="trans">Trans:</label>
-							<select id="trans" name="trans">
-								<option value="0" />Any
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
-
-						<fieldset>
-							<label for="mileage">Mileage:</label>
-							<select id="mileage" name="mileage">
-								<option value="0" />Any
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
-
-						<fieldset>
-							<label for="bodytype">Body Type:</label>
-							<select id="bodytype" name="bodytype">
-								<option value="0" />Any
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
-
-						<div class="clear"></div>
-						<button id="submitSearch" class="submit-search" type="submit">Search</button>
-
-					</form><!--/ .form-panel-->
-
-				</div><!--/ .widget-container-->
-
-
 				<div class="widget-container widget_loan_calculator">
 
 					<div class="widget-head">
-
 						<h3 class="widget-title">Loan Calculator</h3>
-
 					</div>
 
 					<div class="entry-loan">
@@ -471,21 +517,7 @@
 
 	<!-- - - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - -->
 
-	<footer id="footer" class="container clearfix">
 
-		<section class="container clearfix">
-
-			
-
-			<div class="adjective clearfix">
-
-				<p class="copyright">Copyright &copy; 2013. ThemeMakers. All rights reserved.Collect from <a href="http://www.777moban.com/" title="网页模板" target="_blank">网页模板</a></p>
-
-			</div><!--/ .adjective-->
-
-		</section><!--/ .container-->
-
-	</footer><!--/ #footer-->
 
 	<!-- - - - - - - - - - - - - - - end Footer - - - - - - - - - - - - - - - - -->
 
@@ -493,7 +525,7 @@
 
 <div class="account-wrapper">
 
-	<form class="form-reg" method="post" action="" />
+	<form class="form-reg" method="post" action="/user/dologin" />
 
 		<a href="#" class="log">Login</a>
 
@@ -512,8 +544,8 @@
 		</p>
 
 		<p>
-			<a href="#" class="button dark enter-btn">Login</a>
-			<a href="#" class="button dark enter-btn">Create an account</a>
+			<input type="submit" class="button dark enter-btn" value="Login" >
+			<a href="/user/register" class="button dark enter-btn">Create an account</a>
 		</p>
 
 	</form><!--/ .form-reg-->

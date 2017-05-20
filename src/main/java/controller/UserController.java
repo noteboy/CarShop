@@ -24,7 +24,13 @@ public class UserController {
     {
         UserEntity userEntity = userService.login(request.getParameter("username"),
                 request.getParameter("password"));
-        System.out.println(userEntity.getuName());
-        return "admin/users";
+        if(userEntity==null)
+            return "user/LoginFailed";
+        return "carshop/index";
+    }
+    //用户注册
+    @RequestMapping(value = "/register",method = RequestMethod.GET)
+    public String register(UserEntity userEntity){
+        return "carshop/reg";
     }
 }

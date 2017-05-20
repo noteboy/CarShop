@@ -1,3 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
 <!--[if IE 9]>					<html class="ie9 no-js" lang="en">     <![endif]-->
@@ -15,8 +17,8 @@
 	<link rel="shortcut" href="images/favicon.ico" />
 	<link rel="stylesheet" href="css/style.css" media="screen" />
 	<link rel="stylesheet" href="css/skeleton.css" media="screen" />
-	<link rel="stylesheet" href="css/flexslider.css" media="screen" />
-	<link rel="stylesheet" href="css/jquery.fancybox.css" media="screen" />
+	<link rel="stylesheet" href="sliders/flexslider/flexslider.css" media="screen" />
+	<link rel="stylesheet" href="fancybox/jquery.fancybox.css" media="screen" />
 
 	<!-- HTML5 Shiv + detect touch events -->
 	<script type="text/javascript" src="js/modernizr.custom.js"></script>
@@ -91,7 +93,7 @@
 						<li><a href="image-and-floats.html">Images and Floats</a></li>
 						<li><a href="pricing-table.html">Pricing Tables</a></li>
 						<li><a href="typography.html">Typography</a></li>
-						<li><a href="toggle.html">FAQ Toggle</a></li>
+						<li><a href="../../../toggle.html">FAQ Toggle</a></li>
 						<li><a href="columns.html">Column Layout</a></li>
 					</ul>
 				</li>
@@ -523,18 +525,18 @@
 
 <div class="account-wrapper">
 
-	<form class="form-reg" method="post" action="" />
+	<form class="form-reg" method="post" action="/user/dologin" />
 
 		<a href="#" class="log">Login</a>
 
 		<p>
 			<label>Username*</label>
-			<input class="input-medium" type="text" />
+			<input class="input-medium" type="text" name="username"/>
 		</p>
 
 		<p>
 			<label>Password*</label>
-			<input class="input-medium" type="password" />
+			<input class="input-medium" type="password"  name="password"/>
 		</p>
 
 		<p class="forgot-pass">
@@ -542,8 +544,8 @@
 		</p>
 
 		<p>
-			<a href="#" class="button dark enter-btn">Login</a>
-			<a href="./reg.html" class="button dark enter-btn">Create an account</a>
+            <input type="submit" class="button dark enter-btn" value="Login" >
+			<a href="/user/register" class="button dark enter-btn">Create an account</a>
 		</p>
 
 	</form><!--/ .form-reg-->
@@ -553,9 +555,9 @@
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
 <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
 <!--[if lt IE 9]>
-	<script src="js/selectivizr-and-extra-selectors.min.js"></script>
+<script src="js/selectivizr-and-extra-selectors.min.js"></script>
 <![endif]-->
-<script src="js/jquery.flexslider-min.js"></script>
+<script src="sliders/flexslider/jquery.flexslider-min.js"></script>
 <!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
 <!-- <script src="js/jquery.gmap.min.js"></script> -->
 <script src="js/custom.js"></script>
