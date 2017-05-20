@@ -43,4 +43,14 @@
 
     <!-- 开启事务管理注解 -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <mvc:resources location="/WEB-INF/pages/carshop/js/" mapping="/js/**"/>
+    <mvc:resources location="/WEB-INF/pages/carshop/css/" mapping="/css/**"/>
+
+    <mvc:resources location="/WEB-INF/pages/carshop/images/" mapping="/Images/**"/>
+    <mvc:resources location="/WEB-INF/pages/carshop/changer/images/" mapping="/Images/**"/>
+    <mvc:resources location="/WEB-INF/pages/carshop/changer/css/" mapping="/css/**"/>
+    <mvc:resources location="/WEB-INF/pages/carshop/changer/js/" mapping="/js/**"/>
+
+
 </beans>

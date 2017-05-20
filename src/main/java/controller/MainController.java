@@ -51,4 +51,9 @@ public class MainController {
         // 返回pages目录下的admin/users.jsp页面
         return "admin/users";
     }
+    @RequestMapping(value = "/carshop",method = RequestMethod.GET)
+    public String text()
+    {
+        return "carshop/index";
+    }
 }
