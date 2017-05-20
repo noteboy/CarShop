@@ -12,7 +12,7 @@
 <!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> -->
 <!-- /fonts -->
 <!-- css files -->
-<link href="css/reg.css" rel="stylesheet" type='text/css' media="all" />
+<link href="/css/reg.css" rel="stylesheet" type='text/css' media="all" />
 <!-- /css files -->
 </head>
 <body>
@@ -29,7 +29,7 @@
 			<input type="password" id="password2" name="password2" placeholder="重复密码" disabled="true" required/>
         </div>
         <!-- The rotating arrow -->
-		<img src="images/dial.png" alt="" class="dial-agileits agileinfo">
+		<img src="/images/dial.png" alt="" class="dial-agileits agileinfo">
         <div class="arrowCap agileinfo"></div>
         <div class="arrow agile"></div>
         <p class="meterText agileits">您密码的安全等级</p>
