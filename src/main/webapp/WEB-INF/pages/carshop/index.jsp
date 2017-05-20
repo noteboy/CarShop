@@ -525,18 +525,18 @@
 
 <div class="account-wrapper">
 
-	<form class="form-reg" method="post" action="" />
+	<form class="form-reg" method="post" action="/user/dologin" />
 
 		<a href="#" class="log">Login</a>
 
 		<p>
 			<label>Username*</label>
-			<input class="input-medium" type="text" />
+			<input class="input-medium" type="text" name="username"/>
 		</p>
 
 		<p>
 			<label>Password*</label>
-			<input class="input-medium" type="password" />
+			<input class="input-medium" type="password"  name="password"/>
 		</p>
 
 		<p class="forgot-pass">
@@ -544,7 +544,8 @@
 		</p>
 
 		<p>
-			<a href="#" class="button dark enter-btn">Login</a>
+            <input type="submit" class="button dark enter-btn" value="Login" >
+
 			<a href="reg.html" class="button dark enter-btn">Create an account</a>
 		</p>
 

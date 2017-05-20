@@ -22,7 +22,7 @@ public interface UserService {
      * 可以传入user的子类
      * @return 注册是否成功，成功返回true ，否则返回false
      * */
-    public boolean login(UserEntity user);
+    public UserEntity login(String name,String password);
 /**
  * 查询汽车功能
  * @param carId 汽车id

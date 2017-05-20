@@ -22,6 +22,7 @@ import java.util.List;
 @Controller
 public class MainController {
 
+
     @Autowired
     UserRepository userRepository;
     CustomerRepository customerRepository;
@@ -52,8 +53,7 @@ public class MainController {
         return "admin/users";
     }
     @RequestMapping(value = "/carshop",method = RequestMethod.GET)
-    public String text()
-    {
+    public String text(){
         return "carshop/index";
     }
 }
