@@ -3,7 +3,7 @@
 <!doctype html>
 <html>
 <head>
-<title注册</title>
+<title>注册</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Custom Login Form Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -38,8 +38,8 @@
 </div>
 <p class="copyright wthree">© 2017 carsale All Rights Reserved | Design by IMU</p>
 <!-- js files -->
-<script src="js/jquery-1.7.2.min.js"></script>
-<script src="js/jquery.complexify.js"></script>
-<script src="js/script.js"></script>
+<script href="js/jquery-1.7.2.min.js"></script>
+<script href="js/jquery.complexify.js"></script>
+<script href="js/script.js"></script>
 </body>
 </html>
