@@ -73,12 +73,12 @@ jQuery.extend({
 	$.include('js/respond.min.js');
 
 	if(jQuery('.video-image').length) {
-		$.include('fancybox/jquery.fancybox.pack.js');
+		$.include('js/jquery.fancybox.pack.js');
 	}
 
 	//	Panel
-	$.include('changer/js/changer.js');
-	$.include('changer/js/colorpicker.js');
+	$.include('js/changer.js');
+	$.include('js/colorpicker.js');
 
 /* end  */
 
