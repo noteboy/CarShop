@@ -13,10 +13,11 @@
 
     <!--指明 controller 所在包，并扫描其中的注解-->
     <context:component-scan base-package="controller"/>
-
+    <!-- 扫描service包下所有的使用注解的类型,service包及其子包中的所有类 -->
+    <context:component-scan base-package="service"/>
     <!-- 静态资源(js、image等)的访问 -->
     <mvc:default-servlet-handler/>
-
+    <mvc:annotation-driven />
     <!-- 开启注解 -->
     <mvc:annotation-driven/>
 
@@ -43,4 +44,8 @@
 
     <!-- 开启事务管理注解 -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
+
+
+
+
 </beans>

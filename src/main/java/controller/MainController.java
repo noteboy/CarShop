@@ -26,6 +26,7 @@ public class MainController {
 
     @Autowired
     UserRepository userRepository;
+    @Autowired
     CustomerRepository customerRepository;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)

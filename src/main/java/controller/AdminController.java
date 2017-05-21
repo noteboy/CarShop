@@ -23,6 +23,7 @@ public class AdminController {
 
     @Autowired
     UserRepository userRepository;
+    @Autowired
     CustomerRepository customerRepository;
 
 
