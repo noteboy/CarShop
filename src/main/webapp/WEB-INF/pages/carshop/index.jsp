@@ -35,9 +35,8 @@
 
 		<div class="widget-container widget_search">
 
-			<!-- <span class="call"><span>+1 234</span> 567-8901</span><br />
-
-			<span class="adds">12 Street, Los Angeles, CA, 94101</span> -->
+			<li class="adds">欢迎您,<span  id="user_name_text"></span>
+			</li>
 
 			<form action="#" id="searchform" method="get" />
 
@@ -54,56 +53,55 @@
 
 			<ul>
 				<li class="current-menu-item"><a href="index.html"></a></li>
-				<li><a href="all-listings.html">Browse By</a>
+				<li><a href="all-listings.html">浏览</a>
 					<ul>
-						<li><a href="all-listings.html">All Listings</a></li>
-						<li><a href="#">Manufacturer</a>
+						<li><a href="all-listings.html">所有列表</a></li>
+						<li><a href="#">厂商</a>
 							<ul>
-								<li><a href="one-products.html">Aston Martin</a></li>
-								<li><a href="one-products.html">Audi</a></li>
-								<li><a href="one-products.html">BMW</a></li>
-								<li><a href="one-products.html">Chevrolet</a></li>
-								<li><a href="one-products.html">Mercedes Benz</a></li>
-								<li><a href="one-products.html">Ferrari</a></li>
-								<li><a href="one-products.html">Lexus</a></li>
-								<li><a href="one-products.html">Porsche</a></li>
-								<li><a href="one-products.html">Toyota</a></li>
+								<li><a href="one-products.html">阿斯顿马丁</a></li>
+								<li><a href="one-products.html">奥迪</a></li>
+								<li><a href="one-products.html">宝马</a></li>
+								<li><a href="one-products.html">雪佛兰</a></li>
+								<li><a href="one-products.html">梅赛德斯奔驰</a></li>
+								<li><a href="one-products.html">法拉利</a></li>
+								<li><a href="one-products.html">雷克萨斯</a></li>
+								<li><a href="one-products.html">保时捷</a></li>
+								<li><a href="one-products.html">丰田</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Body Type</a></li>
-						<li><a href="#">Engine Size</a></li>
-						<li><a href="#">Mileage</a></li>
-						<li><a href="#">Model Year</a></li>
-						<li><a href="#">Price Range</a></li>
-						<li><a href="#">Transmission</a></li>
+						<li><a href="#">车型</a></li>
+						<li><a href="#">发动机尺寸</a></li>
+						<li><a href="#">公里数</a></li>
+						<li><a href="#">年型</a></li>
+						<li><a href="#">价格幅度</a></li>
+						<li><a href="#">传动装置</a></li>
 					</ul>
 				</li>
-				<li><a href="blog.html">Blog</a>
+				<li><a href="blog.html">博客</a>
 					<ul>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="blog-single.html">Blog Single</a></li>
+						<li><a href="blog.html">博客</a></li>
+						<li><a href="blog-single.html">博客</a></li>
 					</ul>
 				</li>
-				<li><a href="alternative-blog.html">News</a></li>
-				<li><a href="sales-reps.html">Sales Reps</a></li>
+				<li><a href="alternative-blog.html">新闻</a></li>
+				<li><a href="sales-reps.html">价格报道</a></li>
 				<li><a href="compare-listings.html">Pages</a>
 					<ul>
-						<li><a href="compare-listings.html">Compare Listings</a></li>
-						<li><a href="404.html">404 Page</a></li>
-						<li><a href="image-and-floats.html">Images and Floats</a></li>
-						<li><a href="pricing-table.html">Pricing Tables</a></li>
-						<li><a href="typography.html">Typography</a></li>
-						<li><a href="../../../toggle.html">FAQ Toggle</a></li>
-						<li><a href="columns.html">Column Layout</a></li>
+						<li><a href="compare-listings.html">比较列表</a></li>
+						<li><a href="404.html">404页面</a></li>
+						<li><a href="image-and-floats.html">图片</a></li>
+						<li><a href="pricing-table.html">价格表</a></li>
+						<li><a href="typography.html">排版</a></li>
+						<li><a href="../../../toggle.html">FAQ 标签</a></li>
+						<li><a href="columns.html">栅格布局</a></li>
 					</ul>
 				</li>
-				<li><a href="contact.html">Contacts</a></li>
+				<li><a href="contact.html">联系我们</a></li>
 			</ul>
 
 		</nav><!--/ #navigation-->
 
 	</header><!--/ #header-->
-	<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >Website Template</a></div>
 	<!-- - - - - - - - - - - - - - end Header - - - - - - - - - - - - - - - - -->
 
 
@@ -124,13 +122,13 @@
 						<div class="caption-entry">
 
 							<dl class="auto-detailed clearfix">
-								<dt><span class="model">2005 Shevrolet</span></dt>
-								<dd class="media-hidden"><b>1.8 XRS Sedan</b></dd>
-								<dd class="media-hidden"><b>36000 Miles</b></dd>
-								<dd><span class="heading">$25896</span></dd>
+								<dt><span class="model">2005 款雪佛兰</span></dt>
+								<dd class="media-hidden"><b>1.8 XRS 轿车</b></dd>
+								<dd class="media-hidden"><b>36000 公里</b></dd>
+								<dd><span class="heading">￥25896</span></dd>
 							</dl><!--/ .auto-detailed-->
 
-							<a href="#" class="button orange">Details &raquo;</a>
+							<a href="#" class="button orange">详情 &raquo;</a>
 
 						</div><!--/ .caption-entry-->
 					</div><!--/ .caption-->
@@ -142,13 +140,13 @@
 						<div class="caption-entry">
 
 							<dl class="auto-detailed clearfix">
-								<dt><span class="model">2012 BMW</span></dt>
-								<dd class="media-hidden"><b>1.8 XRS Sedan</b></dd>
-								<dd class="media-hidden"><b>36000 Miles</b></dd>
-								<dd><span class="heading">$25896</span></dd>
+								<dt><span class="model">2012 款宝马</span></dt>
+								<dd class="media-hidden"><b>1.8 XRS 轿车</b></dd>
+								<dd class="media-hidden"><b>36000 公里</b></dd>
+								<dd><span class="heading">￥25896</span></dd>
 							</dl><!--/ .auto-detailed-->
 
-							<a href="#" class="button orange">Details &raquo;</a>
+							<a href="#" class="button orange">详情 &raquo;</a>
 
 						</div><!--/ .caption-entry-->
 					</div><!--/ .caption-->
@@ -160,13 +158,13 @@
 						<div class="caption-entry">
 
 							<dl class="auto-detailed clearfix">
-								<dt><span class="model">2010 Subaru</span></dt>
-								<dd class="media-hidden"><b>1.8 XRS Sedan</b></dd>
-								<dd class="media-hidden"><b>36000 Miles</b></dd>
-								<dd><span class="heading">$25896</span></dd>
+								<dt><span class="model">2010 款斯巴鲁</span></dt>
+								<dd class="media-hidden"><b>1.8 XRS 轿车</b></dd>
+								<dd class="media-hidden"><b>36000 公里</b></dd>
+								<dd><span class="heading">￥25896</span></dd>
 							</dl><!--/ .auto-detailed-->
 
-							<a href="#" class="button orange">Details &raquo;</a>
+							<a href="#" class="button orange">详情 &raquo;</a>
 
 						</div><!--/ .caption-entry-->
 					</div><!--/ .caption-->
@@ -178,13 +176,13 @@
 						<div class="caption-entry">
 
 							<dl class="auto-detailed clearfix">
-								<dt><span class="model">2005 Honda</span></dt>
-								<dd class="media-hidden"><b>1.8 XRS Sedan</b></dd>
-								<dd class="media-hidden"><b>36000 Miles</b></dd>
-								<dd><span class="heading">$25896</span></dd>
+								<dt><span class="model">2005 款本田</span></dt>
+								<dd class="media-hidden"><b>1.8 XRS 轿车</b></dd>
+								<dd class="media-hidden"><b>36000 公里</b></dd>
+								<dd><span class="heading">￥25896</span></dd>
 							</dl><!--/ .auto-detailed-->
 
-							<a href="#" class="button orange">Details &raquo;</a>
+							<a href="#" class="button orange">详情 &raquo;</a>
 
 						</div><!--/ .caption-entry-->
 					</div><!--/ .caption-->
@@ -196,13 +194,13 @@
 						<div class="caption-entry">
 
 							<dl class="auto-detailed clearfix">
-								<dt><span class="model">2005 Honda</span></dt>
-								<dd class="media-hidden"><b>1.8 XRS Sedan</b></dd>
-								<dd class="media-hidden"><b>36000 Miles</b></dd>
-								<dd><span class="heading">$25896</span></dd>
+								<dt><span class="model">2005 款本田</span></dt>
+								<dd class="media-hidden"><b>1.8 XRS 轿车</b></dd>
+								<dd class="media-hidden"><b>36000 公里</b></dd>
+								<dd><span class="heading">￥25896</span></dd>
 							</dl><!--/ .auto-detailed-->
 
-							<a href="#" class="button orange">Details &raquo;</a>
+							<a href="#" class="button orange">详情 &raquo;</a>
 
 						</div><!--/ .caption-entry-->
 					</div><!--/ .caption-->
@@ -218,66 +216,66 @@
 
 		<div class="widget_custom_search">
 
-			<h3 class="widget-title">Quick Search</h3>
+			<h3 class="widget-title">快捷搜索</h3>
 
 			<form action="/" id="boxpanel" class="form-panel" />
 
 				<fieldset>
-					<label for="manufacturer">Manufacturer:</label>
+					<label for="manufacturer">厂商:</label>
 					<select id="manufacturer" name="manufacturer">
-						<option value="0" />Any
-						<option value="1" />Lorem
-						<option value="2" />Ipsum
+						<option value="0" />所有
+						<option value="1" />宝马
+						<option value="2" />奥迪
 					</select>
 				</fieldset>
 
 				<fieldset>
-					<label for="minprice">Min Price:</label>
+					<label for="minprice">最低价:</label>
 					<select id="minprice" name="minprice">
-						<option value="0" />No min
-						<option value="1" />Lorem
-						<option value="2" />Ipsum
+						<option value="0" />不限
+						<option value="1" />￥10000
+						<option value="2" />￥500000
 					</select>
 				</fieldset>
 
 				<fieldset>
-					<label for="maxprice">Max Price:</label>
+					<label for="maxprice">最高价：</label>
 					<select id="maxprice" name="maxprice">
-						<option value="0" />No max
-						<option value="1" />Lorem
-						<option value="2" />Ipsum
+						<option value="0" />不限
+						<option value="1" />1000000
+						<option value="2" />5000000
 					</select>
 				</fieldset>
 
 				<fieldset>
-					<label for="trans">Trans:</label>
+					<label for="trans">运输：</label>
 					<select id="trans" name="trans">
-						<option value="0" />Any
-						<option value="1" />Lorem
-						<option value="2" />Ipsum
+						<option value="0" />不限
+						<option value="1" />自提
+						<option value="2" />当地4S
 					</select>
 				</fieldset>
 
 				<fieldset>
-					<label for="mileage">Mileage:</label>
+					<label for="mileage">公里:</label>
 					<select id="mileage" name="mileage">
-						<option value="0" />Any
-						<option value="1" />Lorem
-						<option value="2" />Ipsum
+						<option value="0" />不限
+						<option value="1" />0
+						<option value="2" />100000
 					</select>
 				</fieldset>
 
 				<fieldset>
-					<label for="bodytype">Body Type:</label>
+					<label for="bodytype">车型:</label>
 					<select id="bodytype" name="bodytype">
-						<option value="0" />Any
-						<option value="1" />Lorem
-						<option value="2" />Ipsum
+						<option value="0" />不限
+						<option value="1" />小型
+						<option value="2" />厢式
 					</select>
 				</fieldset>
 
 				<div class="clear"></div>
-				<button id="submitSearch" class="submit-search" type="submit">Search</button>
+				<button id="submitSearch" class="submit-search" type="submit">搜索</button>
 
 			</form><!--/ .form-panel-->
 
@@ -301,7 +299,7 @@
 
 				<div class="recent-list-cars">
 
-					<h3 class="widget-title">Recent Automobiles</h3>
+					<h3 class="widget-title">最新款式</h3>
 
 					<ul class="clearfix">
 
@@ -311,17 +309,17 @@
 							</a>
 
 							<a href="#" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
+								<h6 class="title-list-item">2009 款阿斯顿马丁 DB9</h6>
 							</a>
 
 							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
+								<span class="cost">￥8.966</span>
+								<span>1.4i TS 5Dr发动机</span> <br />
+								<b>23000 公里</b>
 							</div><!--/ .detailed-->
 
-							<a href="#" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+							<a href="#" class="button orange">详情</a>
+							<label class="compare"><input type="checkbox" />比较</label>
 
 						</li>
 
@@ -331,17 +329,17 @@
 							</a>
 
 							<a href="#" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
+								<h6 class="title-list-item">2009 款阿斯顿马丁 DB9</h6>
 							</a>
 
 							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
+								<span class="cost">￥8.966</span>
+								<span>1.4i TS 5Dr发动机</span> <br />
+								<b>23000 公里</b>
 							</div><!--/ .detailed-->
 
-							<a href="#" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+							<a href="#" class="button orange">详情</a>
+							<label class="compare"><input type="checkbox" />比较</label>
 
 						</li>
 
@@ -351,17 +349,17 @@
 							</a>
 
 							<a href="#" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
+								<h6 class="title-list-item">2009 款阿斯顿马丁 DB9</h6>
 							</a>
 
 							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
+								<span class="cost">￥8.966</span>
+								<span>1.4i TS 5Dr发动机</span> <br />
+								<b>23000 公里</b>
 							</div><!--/ .detailed-->
 
-							<a href="#" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+							<a href="#" class="button orange">详情</a>
+							<label class="compare"><input type="checkbox" />比较</label>
 
 						</li>
 
@@ -371,17 +369,17 @@
 							</a>
 
 							<a href="#" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
+								<h6 class="title-list-item">2009 款阿斯顿马丁 DB9</h6>
 							</a>
 
 							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
+								<span class="cost">￥8.966</span>
+								<span>1.4i TS 5Dr发动机</span> <br />
+								<b>23000 公里</b>
 							</div><!--/ .detailed-->
 
-							<a href="#" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+							<a href="#" class="button orange">详情</a>
+							<label class="compare"><input type="checkbox" />比较</label>
 
 						</li>
 
@@ -391,17 +389,17 @@
 							</a>
 
 							<a href="#" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
+								<h6 class="title-list-item">2009 款阿斯顿马丁 DB9</h6>
 							</a>
 
 							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
+								<span class="cost">￥8.966</span>
+								<span>1.4i TS 5Dr发动机</span> <br />
+								<b>23000 公里</b>
 							</div><!--/ .detailed-->
 
-							<a href="#" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+							<a href="#" class="button orange">详情</a>
+							<label class="compare"><input type="checkbox" />比较</label>
 
 						</li>
 
@@ -411,23 +409,23 @@
 							</a>
 
 							<a href="#" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
+								<h6 class="title-list-item">2009 款阿斯顿马丁 DB9</h6>
 							</a>
 
 							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
+								<span class="cost">￥8.966</span>
+								<span>1.4i TS 5Dr发动机</span> <br />
+								<b>23000 公里</b>
 							</div><!--/ .detailed-->
 
-							<a href="#" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+							<a href="#" class="button orange">详情</a>
+							<label class="compare"><input type="checkbox" />比较</label>
 
 						</li>
 
 					</ul>
 
-					<a href="#" class="see">See all automobiles</a>
+					<a href="#" class="see">查看所有款式汽车</a>
 
 				</div><!--/ .recent-list-cars-->
 
@@ -443,44 +441,44 @@
 				<div class="widget-container widget_loan_calculator">
 
 					<div class="widget-head">
-						<h3 class="widget-title">Loan Calculator</h3>
+						<h3 class="widget-title">贷款计算器</h3>
 					</div>
 
 					<div class="entry-loan">
 
 						<table>
 							<tr>
-								<td><label for="loan_amount">Loan Amount</label></td>
+								<td><label for="loan_amount">贷款额</label></td>
 								<td><input id="loan_amount" type="text" value="0.00" /></td>
 								<td>$</td>
 							</tr>
 							<tr>
-								<td><label for="payment">Down Payment</label></td>
+								<td><label for="payment">预付定金</label></td>
 								<td><input id="payment" type="text" value="0.00" /></td>
 								<td>$</td>
 							</tr>
 							<tr>
-								<td><label for="rate">Annual Rate</label></td>
+								<td><label for="rate">年付</label></td>
 								<td><input id="rate" type="text" value="0.00" /></td>
 								<td>%</td>
 							</tr>
 							<tr>
-								<td><label for="term">Term</label></td>
+								<td><label for="term">期限</label></td>
 								<td><input id="term" type="text" value="0.00" /></td>
 								<td>Yrs</td>
 							</tr>
 							<tr>
 								<td>
-									<a id="buttonCalculate" href="#" class="button orange">Calculate</a>
+									<a id="buttonCalculate" href="#" class="button orange">计算</a>
 								</td>
 							</tr>
 							<tr>
-								<td><label for="payments">Payments</label></td>
+								<td><label for="payments">支付</label></td>
 								<td><input id="payments" type="text" value="0.00" /></td>
 								<td></td>
 							</tr>
 							<tr>
-								<td><label for="mpayment">Monthly Payment</label></td>
+								<td><label for="mpayment">每月支付</label></td>
 								<td><input id="mpayment" type="text" value="0.00" /></td>
 								<td>$</td>
 							</tr>
@@ -492,15 +490,15 @@
 
 				<div class="widget-container widget_recent_entries">
 
-					<h3 class="widget-title">Recent News</h3>
+					<h3 class="widget-title">最新车闻</h3>
 
 					<ul>
-						<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing</a></li>
-						<li><a href="#">Ipsum dolor sit amet, consectetur adipisicing</a></li>
-						<li><a href="#">Set magna ipsum dolor sit amet, consectetur adipisicing</a></li>
+						<li><a href="#">降价榜:蒙迪欧降至15.48万</a></li>
+						<li><a href="#">吉利远景X1上市3.99万起</a></li>
+						<li><a href="#">优惠:2017款奥迪Q5直降7万</a></li>
 					</ul>
 
-					<a href="#" class="see">See all news</a>
+					<a href="#" class="see">查看所有新闻</a>
 
 				</div><!--/ .widget-container-->
 
@@ -527,25 +525,25 @@
 
 	<form class="form-reg" method="post" action="/user/dologin" />
 
-		<a href="#" class="log">Login</a>
+		<a href="#" class="log">登陆</a>
 
 		<p>
-			<label>Username*</label>
+			<label>用户名*</label>
 			<input class="input-medium" type="text" name="username"/>
 		</p>
 
 		<p>
-			<label>Password*</label>
+			<label>密码*</label>
 			<input class="input-medium" type="password" name="password" />
 		</p>
 
 		<p class="forgot-pass">
-			<a href="#">Forgot your password?</a>
+			<a href="#">忘记密码？</a>
 		</p>
 
 		<p>
 			<input type="submit" class="button dark enter-btn" value="Login" >
-			<a href="/user/register" class="button dark enter-btn">Create an account</a>
+			<a href="/user/register" class="button dark enter-btn">立即创建账户！</a>
 		</p>
 
 	</form><!--/ .form-reg-->
@@ -561,6 +559,87 @@
 <!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
 <!-- <script src="js/jquery.gmap.min.js"></script> -->
 <script src="js/custom.js"></script>
+<script type="text/javascript">
+    function doSearch() {
+        var msg=$('.search-text').val();
+        location.href='/search_courses.html?name='+msg;
+    }
+    function getCookie(cname)
+    {
+        var name = cname + "=";
+        console.log(document.cookie);
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++)
+        {
+            var c = ca[i].trim();
+            if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+        }
+        return "";
+    }
 
+
+    function Log_out_clear_cookie() {
+
+        document.cookie="cookie=;";
+        document.cookie="nickname=;";
+
+        console.log(document.cookie);
+    }
+
+    window.onload=function () {
+        var document_cookie=document.cookie;
+
+        console.log("document_cookie:"+document.cookie);
+
+        var nickname=getCookie("nickname");
+
+        console.log("nickname:"+nickname);
+
+        var cookie=getCookie("cookie");
+
+        if((nickname!=null&&cookie!=null)&&(cookie!=""||nickname!="")){
+//			alert("none");
+            var login=document.getElementById("Login");
+            login.style.opacity="0";
+            login.style.display="none";
+
+            // 显示用户昵称
+
+            var user=document.getElementById("user_name");
+            user.style.display="block";
+
+            var username=document.getElementById("user_name_text");
+            username.innerText=decodeURI(nickname);
+            username.style.display="block";
+
+            // 显示注销
+            var log_out=document.getElementById("logout");
+            log_out.style.display="block";
+        }else{
+//			alert("login"+"display");
+            var login=document.getElementById("Login");
+            login.style.opacity="1";
+            login.style.display="display";
+
+            // 显示用户昵称
+
+            var user=document.getElementById("user_name");
+            user.style.display="none";
+
+            var username=document.getElementById("user_name_text");
+            username.innerText=nickname;
+            username.style.display="none";
+
+            // 显示注销
+            var log_out=document.getElementById("logout");
+            log_out.style.display="none";
+        }
+
+
+
+    }
+
+
+</script>
 </body>
 </html>
