@@ -14,6 +14,14 @@ public class UserEntity {
     private String uEmail;
     private String uTellphone;
 
+    public UserEntity() {
+    }
+
+    public UserEntity(String uPassword, String uName) {
+        this.uPassword = uPassword;
+        this.uName = uName;
+    }
+
     @Id
     @Column(name = "u_id", nullable = false)
     public int getuId() {

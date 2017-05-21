@@ -531,12 +531,12 @@
 
 		<p>
 			<label>Username*</label>
-			<input class="input-medium" type="text" />
+			<input class="input-medium" type="text" name="username"/>
 		</p>
 
 		<p>
 			<label>Password*</label>
-			<input class="input-medium" type="password" />
+			<input class="input-medium" type="password" name="password" />
 		</p>
 
 		<p class="forgot-pass">

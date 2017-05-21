@@ -18,15 +18,15 @@
 <body>
 <h1 class="w3ls">没有账号？注册</h1>
 <div id="main">
-    <form class="w3l" method="post" action="#">
+    <form class="w3l" method="post" action="/user/doRegister">
 		<div class="row email w3layouts">
-	    	<input type="text" id="email" name="email" placeholder="邮箱" required/>
+	    	<input type="text" id="email" name="username" placeholder="用户名" required/>
         </div>
 		<div class="row pass w3layouts">
         	<input type="password" id="password1" name="password1" placeholder="密码" required/>
         </div>
         <div class="row pass agileits">
-			<input type="password" id="password2" name="password2" placeholder="重复密码" disabled="true" required/>
+			<input type="password" id="password2" name="password2" placeholder="重复密码" />
         </div>
         <!-- The rotating arrow -->
 		<img src="/images/dial.png" alt="" class="dial-agileits agileinfo">

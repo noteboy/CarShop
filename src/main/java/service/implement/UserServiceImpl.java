@@ -23,8 +23,9 @@ public class UserServiceImpl implements UserService {
     public boolean register(UserEntity user) {
         UserEntity userEntity = userRepository.queryUserByName(user.getuName());
         if(userEntity!=null)
-            return true;
-        return false;
+            return false;
+        userRepository.save(user);
+        return true;
     }
 
     @Override
