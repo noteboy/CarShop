@@ -29,6 +29,6 @@ public interface CarRepository extends JpaRepository<CarEntity, Integer> {
     //按条件查询汽车
     @Query("from CarEntity  car where car.cBand=:cBand and car.cType=:cType and " +
             "car.cPrice>=:minPrice and car.cPrice<=:maxPrice ")
-    public List<CarEntity> queryCarByCondition(@Param("cBand")String cBand
-    ,@Param("minPrice") String minPrice,@Param("maxprice")String maxPrice,@Param("cType") String cType);
+    public List<CarEntity> queryCarByCondition(String cBand
+    ,String minPrice,String maxPrice, String cType);
 }
