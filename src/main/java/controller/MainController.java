@@ -90,4 +90,13 @@ public class MainController {
   //      modelMap.addAttribute("frontSixCar",frontSixCar);//前六个汽车
         return "carshop/index";
     }
+    @RequestMapping(value = "/details",method = RequestMethod.GET)
+    public String getDetails(){
+        return "carshop/one-products";
+    }
+    @RequestMapping(value = "/quickSearch",method = RequestMethod.GET)
+    public String quickSearch(String manufacturer,String minprice,String maxprice,String type,
+    ModelMap modelMap ){
+        return "carshop/all-listings";
+    }
 }

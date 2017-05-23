@@ -255,7 +255,7 @@
 
 				<fieldset>
 					<label for="bodytype">车型:</label>
-					<select id="bodytype" name="type">
+					<select id="bodytype" name="bodytype">
                         <c:forEach items="${allCarType}" var="carType">
                             <option value="${carType}" name="${carType}"/>${carType}
                             <%--<option value="1" />宝马--%>
