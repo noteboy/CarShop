@@ -1,10 +1,12 @@
 package service.implement;
 
 import model.CarEntity;
+import model.CustomerEntity;
 import model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import repository.CarRepository;
+import repository.CustomerRepository;
 import repository.UserRepository;
 import service.UserService;
 
@@ -19,13 +21,18 @@ public class UserServiceImpl implements UserService {
     UserRepository userRepository;
     @Autowired
     CarRepository carRepository;
+    @Autowired
+    CustomerRepository customerRepository;
     @Override
-    public boolean register(UserEntity user) {
+    public UserEntity register(UserEntity user) {
         UserEntity userEntity = userRepository.queryUserByName(user.getuName());
         if(userEntity!=null)
-            return false;
+            return userEntity;
         userRepository.save(user);
-        return true;
+        UserEntity userEntity1 = userRepository.queryUserByName(user.getuName());
+        //save to customer
+        customerRepository.save(new CustomerEntity(userEntity1.getuId()));
+        return userEntity1;
     }
 
     @Override

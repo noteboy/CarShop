@@ -9,14 +9,10 @@ import model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import repository.CustomerRepository;
 import repository.UserRepository;
-
-import java.util.List;
 
 @Controller
 public class AdminController {
@@ -25,6 +21,7 @@ public class AdminController {
     UserRepository userRepository;
     @Autowired
     CustomerRepository customerRepository;
+
 
 
     // 查看用户详情

@@ -314,6 +314,9 @@ h6 {line-height: 1.5em;}
 			right: 10px;
 			background-position: 0 bottom;
 		}
+	.single-image img{
+		height: 105px;
+	}
 
 	.video-image.video-icon .curtain:after {
 		top: 50%;
@@ -2079,7 +2082,7 @@ article.entry:first-child {margin-top: 0;}
 			background-image: url(../images/icons/search-sprite-icons.png);
 			background-repeat: no-repeat;
 			color: #757373;
-			text-align: right;
+			text-align: left;
 		}
 
 		.widget_search .call {font-size: 17px;}

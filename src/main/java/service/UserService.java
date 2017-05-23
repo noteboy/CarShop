@@ -17,7 +17,7 @@ public interface UserService {
     * @param  user
     * @return 注册是否成功，成功返回true ，否则返回false
     * */
-    public boolean register(UserEntity user);
+    public UserEntity register(UserEntity user);
     /**
      * 用户登录功能
      * @param name

@@ -12,8 +12,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import repository.CustomerRepository;
 import repository.UserRepository;
+import tools.CarMessage;
 
 import java.util.List;
 
@@ -23,11 +23,12 @@ import java.util.List;
 @Controller
 public class MainController {
 
-
     @Autowired
     UserRepository userRepository;
     @Autowired
     CustomerRepository customerRepository;
+    @Autowired
+    CarMessage carMessage;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(ModelMap modelMap) {
@@ -78,7 +79,14 @@ public class MainController {
         return "redirect:/admin/user/users";
     }
     @RequestMapping(value = "/carshop",method = RequestMethod.GET)
-    public String text(){
+    public String text(ModelMap modelMap){
+        List<String> carBank = carMessage.getBankType();
+        System.out.println("汽车的品牌个数："+carBank.size());
+        List<String> carType = carMessage.getCarType();
+//        List<CarEntity> frontSixCar = carMessage.getFrontSixCar(6);
+        modelMap.addAttribute("allBank",carBank);//添加数据库商标的类型
+        modelMap.addAttribute("allCarType",carType);//汽车类型
+  //      modelMap.addAttribute("frontSixCar",frontSixCar);//前六个汽车
         return "carshop/index";
     }
 }
