@@ -26,7 +26,7 @@
         	<input type="password" id="password1" name="password1" placeholder="密码" required/>
         </div>
         <div class="row pass agileits">
-			<input type="password" id="password2" name="password2" placeholder="重复密码" />
+			<input type="password" id="password2" name="password2" placeholder="重复密码" required />
         </div>
         <!-- The rotating arrow -->
 		<img src="/images/dial.png" alt="" class="dial-agileits agileinfo">
@@ -38,8 +38,8 @@
 </div>
 <p class="copyright wthree">© 2017 carsale All Rights Reserved | Design by IMU</p>
 <!-- js files -->
-<script href="js/jquery-1.7.2.min.js"></script>
-<script href="js/jquery.complexify.js"></script>
-<script href="js/script.js"></script>
 </body>
+<script src="/js/jquery-1.7.2.min.js"></script>
+<script src="/js/jquery.complexify.js"></script>
+<script src="/js/script.js"></script>
 </html>
