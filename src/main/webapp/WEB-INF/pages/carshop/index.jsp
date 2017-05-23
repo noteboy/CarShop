@@ -35,7 +35,13 @@
 
 		<div class="widget-container widget_search">
 
-			<li class="adds">欢迎您,<span  id="user_name_text"></span>
+			<li class="adds">
+				<c:if test="${!empty sessionScope.user}">
+                 <a href="" style="color: #ab8071">${sessionScope.user["uName"]}</a>
+					欢迎您!
+				</c:if>
+
+				<span  id="user_name_text"></span>
 			</li>
 
 			<form action="#" id="searchform" method="get" />
@@ -223,16 +229,17 @@
 				<fieldset>
 					<label for="manufacturer">厂商:</label>
 					<select id="manufacturer" name="manufacturer">
-						<option value="0" />所有
-						<option value="1" />宝马
-						<option value="2" />奥迪
+                        <c:forEach items="${allBank}" var="bank">
+                        <option value="${bank}" name="${bank}"/>${bank}
+						<%--<option value="1" />宝马--%>
+						<%--<option value="2" />奥迪--%>
+                        </c:forEach>
 					</select>
 				</fieldset>
 
 				<fieldset>
 					<label for="minprice">最低价:</label>
 					<select id="minprice" name="minprice">
-						<option value="0" />不限
 						<option value="1" />￥10000
 						<option value="2" />￥500000
 					</select>
@@ -241,36 +248,19 @@
 				<fieldset>
 					<label for="maxprice">最高价：</label>
 					<select id="maxprice" name="maxprice">
-						<option value="0" />不限
 						<option value="1" />1000000
 						<option value="2" />5000000
 					</select>
 				</fieldset>
 
 				<fieldset>
-					<label for="trans">运输：</label>
-					<select id="trans" name="trans">
-						<option value="0" />不限
-						<option value="1" />自提
-						<option value="2" />当地4S
-					</select>
-				</fieldset>
-
-				<fieldset>
-					<label for="mileage">公里:</label>
-					<select id="mileage" name="mileage">
-						<option value="0" />不限
-						<option value="1" />0
-						<option value="2" />100000
-					</select>
-				</fieldset>
-
-				<fieldset>
 					<label for="bodytype">车型:</label>
 					<select id="bodytype" name="bodytype">
-						<option value="0" />不限
-						<option value="1" />小型
-						<option value="2" />厢式
+                        <c:forEach items="${allCarType}" var="carType">
+                            <option value="${carType}" name="${carType}"/>${carType}
+                            <%--<option value="1" />宝马--%>
+                            <%--<option value="2" />奥迪--%>
+                        </c:forEach>
 					</select>
 				</fieldset>
 
@@ -305,7 +295,7 @@
 
 						<li>
 							<a href="#" class="single-image video picture">
-								<img src="images/temp/thumb-1.jpg" alt="" />
+								<img src="images/temp/1.jpg" alt="" />
 							</a>
 
 							<a href="#" class="list-meta">

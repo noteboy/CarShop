@@ -14,6 +14,7 @@ public class CarEntity {
     private String cType;
     private String cBand;
     private String cColor;
+    private String imgurl;
 
     @Id
     @Column(name = "c_id", nullable = false)
@@ -101,5 +102,15 @@ public class CarEntity {
         result = 31 * result + (cBand != null ? cBand.hashCode() : 0);
         result = 31 * result + (cColor != null ? cColor.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "imgurl", nullable = true, length = 100)
+    public String getImgurl() {
+        return imgurl;
+    }
+
+    public void setImgurl(String imgurl) {
+        this.imgurl = imgurl;
     }
 }

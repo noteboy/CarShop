@@ -225,6 +225,10 @@ ALTER TABLE `shopcar`
 --
 ALTER TABLE `vipcustomer`
   ADD CONSTRAINT `vipcustomer_ibfk_1` FOREIGN KEY (`u_id`) REFERENCES `user` (`u_id`);
-
+-- 2017.5.21
+-- 添加列图片位置
+ALTER TABLE `car` ADD `imgurl` VARCHAR(100) ;
+--
+INSERT INTO `car` (`c_id`, `c_name`, `c_price`, `c_type`, `c_band`, `c_color`, `imgurl`) VALUES (NULL, '宝马x6', '60', '小型', '宝马', '白色', NULL);
 
 

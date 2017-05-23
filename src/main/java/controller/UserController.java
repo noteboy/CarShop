@@ -45,10 +45,12 @@ public class UserController {
     //验证注册
     @RequestMapping(value = "/doRegister",method = RequestMethod.POST)
     public String doRegister(String username,String password1,ModelMap modelMap){
-        if(userService.register(new UserEntity(password1,username)))
+        UserEntity userEntity = userService.register(new UserEntity(password1,username));
+        if(userEntity!=null)
+        {
+            modelMap.addAttribute("user",userEntity);
             return "redirect:/carshop";
-        modelMap.addAttribute("user",new UserEntity(password1,username));
-        //保存到customer表
+        }
         return "user/RegisterFailed";
     }
 }
