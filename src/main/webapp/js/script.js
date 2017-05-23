@@ -10,23 +10,23 @@ $(function(){
 	$('#main .row input').val('');
 
 	// Handle form submissions
-	form.on('submit',function(e){
-		
-		// Is everything entered correctly?
-		if($('#main .row.success').length == $('#main .row').length){
-			
-			// Yes!
-			alert("Succesfully Submitted!");
-			e.preventDefault(); // Remove this to allow actual submission
-			
-		}
-		else{
-			
-			// No. Prevent form submission
-			e.preventDefault();
-			
-		}
-	});
+	// form.on('submit',function(e){
+	//
+	// 	// Is everything entered correctly?
+	// 	if($('#main .row.success').length == $('#main .row').length){
+	//
+	// 		// Yes!
+	// 		alert("Succesfully Submitted!");
+	// 		e.preventDefault(); // Remove this to allow actual submission
+	//
+	// 	}
+	// 	else{
+	//
+	// 		// No. Prevent form submission
+	// 		e.preventDefault();
+	//
+	// 	}
+	// });
 	
 	// Validate the email field
 	email.on('blur',function(){
