@@ -48,7 +48,7 @@
 
 				<p>
 					<input type="text" id="s" placeholder="搜索" />
-					<button type="submit" id="searchsubmit"></button>
+					<button type="submit" id="searchsubmit" ></button>
 				</p>
 
 			</form><!--/ #searchform-->
@@ -308,7 +308,7 @@
 								<b>23000 公里</b>
 							</div><!--/ .detailed-->
 
-							<a href="#" class="button orange">详情</a>
+							<a href="/details" class="button orange">详情</a>
 							<label class="compare"><input type="checkbox" />比较</label>
 
 						</li>
@@ -552,7 +552,7 @@
 <script type="text/javascript">
     function doSearch() {
         var msg=$('.search-text').val();
-        location.href='/search_courses.html?name='+msg;
+        location.href='/all-listings.html?name='+msg;
     }
     function getCookie(cname)
     {

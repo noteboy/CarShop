@@ -7,7 +7,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
-import repository.CustomerRepository;
 import service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,8 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 public class UserController {
     @Autowired
     UserService userService;
-    @Autowired
-    CustomerRepository customerRepository;
+
     //登录控制
     @RequestMapping(value = "/dologin",method = RequestMethod.POST)
     public String login(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap)

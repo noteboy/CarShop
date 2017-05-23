@@ -1,9 +1,6 @@
 package model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by liuxiaolong on 2017/5/18.
@@ -12,6 +9,7 @@ import javax.persistence.Table;
 @Table(name = "administrator", schema = "carshop", catalog = "")
 public class AdministratorEntity {
     private int aId;
+    private int uId;
 
     @Id
     @Column(name = "a_id", nullable = false)
@@ -38,5 +36,15 @@ public class AdministratorEntity {
     @Override
     public int hashCode() {
         return aId;
+    }
+
+    @Basic
+    @Column(name = "u_id", nullable = false)
+    public int getuId() {
+        return uId;
+    }
+
+    public void setuId(int uId) {
+        this.uId = uId;
     }
 }
