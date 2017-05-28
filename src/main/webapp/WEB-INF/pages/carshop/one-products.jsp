@@ -1,9 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
-<!--[if IE 9]>					<html class="ie9 no-js" lang="en">     <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
+<%--<!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->--%>
+<%--<!--[if IE 9]>					<html class="ie9 no-js" lang="en">     <![endif]-->--%>
+<%--<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->--%>
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Open+Sans:400,600,700|Oswald|Electrolize' rel='stylesheet' type='text/css' />
 	<meta charset="utf-8" />
@@ -13,21 +13,22 @@
 
 	<meta name="description" content="" />
 	<meta name="author" content="" />
-
+	<link rel="stylesheet" href="css/button.css">
 	<link rel="shortcut" href="images/favicon.ico" />
 	<link rel="stylesheet" href="css/style.css" media="screen" />
 	<link rel="stylesheet" href="css/galleriffic.css" media="screen" />
 	<link rel="stylesheet" href="css/skeleton.css" media="screen" />
 	<link rel="stylesheet" href="css/jquery.fancybox.css" media="screen" />
+	<link rel="stylesheet" href="css/cartstyle.css" />
 
 	<!-- HTML5 Shiv + detect touch events -->
 	<script type="text/javascript" src="js/modernizr.custom.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body class="menu-1 h-style-1 text-1">
 
 <div class="wrap">
 
-	<!-- - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - Header - - - - Q- - - - - - - - - - - - -->
 
 	<header id="header" class="clearfix">
 
@@ -41,10 +42,10 @@
 
 			<form action="#" id="searchform" method="get" />
 
-				<p>
-					<input type="text" id="s" placeholder="Search" />
-					<button type="submit" id="searchsubmit"></button>
-				</p>
+			<p>
+				<input type="text" id="s" placeholder="Search" />
+				<button type="submit" id="searchsubmit"></button>
+			</p>
 
 			</form><!--/ #searchform-->
 
@@ -93,7 +94,7 @@
 						<li><a href="image-and-floats.html">Images and Floats</a></li>
 						<li><a href="pricing-table.html">Pricing Tables</a></li>
 						<li><a href="typography.html">Typography</a></li>
-						<li><a href="../../../toggle.html">FAQ Toggle</a></li>
+						<li><a href="toggle.html">FAQ Toggle</a></li>
 						<li><a href="columns.html">Column Layout</a></li>
 					</ul>
 				</li>
@@ -120,7 +121,6 @@
 				<article class="item clearfix">
 
 					<h2 class="title">Ferrari F12 Berlinetta 2012</h2>
-
 					<div id="gallery" class="gallery">
 
 						<div class="slideshow-container">
@@ -190,15 +190,16 @@
 							<li><b>Fuel Type: </b><span>Gas</span></li>
 							<li><b>Owners: </b><span>1</span></li>
 						</ul>
+						<button href="#0" class="button button-caution button-box button-jumbo add-button" data-price="8896.99" data-proid="4" data-proname="Ferrari F12" data-proimg="images\temp\item-1.jpg">添加到购物车</button>
 
-						<ul class="addthis-toolbox clearfix">
-							<li><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a></li>
-							<li><a class="addthis_button_tweet"></a></li>
-							<li><a class="addthis_button_google_plusone" g:plusone:size="medium"></a></li>
-							<li><a class="addthis_counter addthis_pill_style"></a></li>
-						</ul>
+						<!-- <ul class="addthis-toolbox clearfix">
+                           <li><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a></li>
+                           <li><a class="addthis_button_tweet"></a></li>
+                           <li><a class="addthis_button_google_plusone" g:plusone:size="medium"></a></li>
+                           <li><a class="addthis_counter addthis_pill_style"></a></li>
+                       </ul>
 
-						<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f3c188f442f3bf2"></script>
+                       <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f3c188f442f3bf2"></script> -->
 
 					</div><!--/ .extra-->
 
@@ -426,34 +427,34 @@
 
 						<h3 class="section-title">Contact Us regarding this car</h3>
 
-							<form method="post" action="" class="comments-form" />
+						<form method="post" action="" class="comments-form" />
 
-								<p class="input-block">
-									<label for="name">Your Name (required)</label>
-									<input type="text" name="name" id="name" />
-								</p>
+						<p class="input-block">
+							<label for="name">Your Name (required)</label>
+							<input type="text" name="name" id="name" />
+						</p>
 
-								<p class="input-block">
-									<label for="email">Your Email (required)</label>
-									<input type="text" name="email" id="email" />
-								</p>
+						<p class="input-block">
+							<label for="email">Your Email (required)</label>
+							<input type="text" name="email" id="email" />
+						</p>
 
-								<p class="input-block">
-									<label for="web">Website</label>
-									<input type="text" name="web" id="web" />
-								</p>
+						<p class="input-block">
+							<label for="web">Website</label>
+							<input type="text" name="web" id="web" />
+						</p>
 
-								<p class="input-block">
-									<label for="comments">You Message: (required)</label>
-									<textarea name="comments" id="comments" cols="30" rows="10"></textarea>
-								</p>
+						<p class="input-block">
+							<label for="comments">You Message: (required)</label>
+							<textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+						</p>
 
-								<p class="input-block">
-									<label>&nbsp;</label>
-									<button class="button orange" type="submit" id="submit">Submit</button>
-								</p>
+						<p class="input-block">
+							<label>&nbsp;</label>
+							<button class="button orange" type="submit" id="submit">Submit</button>
+						</p>
 
-							</form><!--/ .contact-form-->
+						</form><!--/ .contact-form-->
 
 					</div><!--/ .entry-item-->
 
@@ -474,62 +475,62 @@
 
 					<form action="/" id="boxpanel" class="form-panel" />
 
-						<fieldset>
-							<label for="manufacturer">Manufacturer:</label>
-							<select id="manufacturer" name="manufacturer">
-								<option value="0" />Any
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
+					<fieldset>
+						<label for="manufacturer">Manufacturer:</label>
+						<select id="manufacturer" name="manufacturer">
+							<option value="0" />Any
+							<option value="1" />Lorem
+							<option value="2" />Ipsum
+						</select>
+					</fieldset>
 
-						<fieldset>
-							<label for="minprice">Min Price:</label>
-							<select id="minprice" name="minprice">
-								<option value="0" />No min
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
+					<fieldset>
+						<label for="minprice">Min Price:</label>
+						<select id="minprice" name="minprice">
+							<option value="0" />No min
+							<option value="1" />Lorem
+							<option value="2" />Ipsum
+						</select>
+					</fieldset>
 
-						<fieldset>
-							<label for="maxprice">Max Price:</label>
-							<select id="maxprice" name="maxprice">
-								<option value="0" />No max
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
+					<fieldset>
+						<label for="maxprice">Max Price:</label>
+						<select id="maxprice" name="maxprice">
+							<option value="0" />No max
+							<option value="1" />Lorem
+							<option value="2" />Ipsum
+						</select>
+					</fieldset>
 
-						<fieldset>
-							<label for="trans">Trans:</label>
-							<select id="trans" name="trans">
-								<option value="0" />Any
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
+					<fieldset>
+						<label for="trans">Trans:</label>
+						<select id="trans" name="trans">
+							<option value="0" />Any
+							<option value="1" />Lorem
+							<option value="2" />Ipsum
+						</select>
+					</fieldset>
 
-						<fieldset>
-							<label for="mileage">Mileage:</label>
-							<select id="mileage" name="mileage">
-								<option value="0" />Any
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
+					<fieldset>
+						<label for="mileage">Mileage:</label>
+						<select id="mileage" name="mileage">
+							<option value="0" />Any
+							<option value="1" />Lorem
+							<option value="2" />Ipsum
+						</select>
+					</fieldset>
 
-						<fieldset>
-							<label for="bodytype">Body Type:</label>
-							<select id="bodytype" name="bodytype">
-								<option value="0" />Any
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
+					<fieldset>
+						<label for="bodytype">Body Type:</label>
+						<select id="bodytype" name="bodytype">
+							<option value="0" />Any
+							<option value="1" />Lorem
+							<option value="2" />Ipsum
+						</select>
+					</fieldset>
 
-						<div class="clear"></div>
-						<button id="submitSearch" class="submit-search" type="submit">Search</button>
+					<div class="clear"></div>
+					<button id="submitSearch" class="submit-search" type="submit">Search</button>
 
 					</form><!--/ .form-panel-->
 
@@ -636,41 +637,71 @@
 
 	<form class="form-reg" method="post" action="" />
 
-		<a href="#" class="log">Login</a>
+	<a href="#" class="log">Login</a>
 
-		<p>
-			<label>Username*</label>
-			<input class="input-medium" type="text" />
-		</p>
+	<p>
+		<label>Username*</label>
+		<input class="input-medium" type="text" />
+	</p>
 
-		<p>
-			<label>Password*</label>
-			<input class="input-medium" type="password" />
-		</p>
+	<p>
+		<label>Password*</label>
+		<input class="input-medium" type="password" />
+	</p>
 
-		<p class="forgot-pass">
-			<a href="#">Forgot your password?</a>
-		</p>
+	<p class="forgot-pass">
+		<a href="#">Forgot your password?</a>
+	</p>
 
-		<p>
-			<a href="#" class="button dark enter-btn">Login</a>
-			<a href="#" class="button dark enter-btn">Create an account</a>
-		</p>
+	<p>
+		<a href="#" class="button dark enter-btn">Login</a>
+		<a href="#" class="button dark enter-btn">Create an account</a>
+	</p>
 
 	</form><!--/ .form-reg-->
 
 </div><!--/ .account-wrapper-->
 
+<div class="cd-cart-container empty">
+	<a href="#0" class="cd-cart-trigger">
+		购物车
+		<ul class="count"> <!-- cart items count -->
+			<li>0</li>
+			<li>0</li>
+		</ul> <!-- .count -->
+	</a>
 
+	<div class="cd-cart">
+		<div class="wrapper">
+			<header>
+				<h2>购物车</h2>
+				<span class="undo">已删除 <a href="#0">恢复</a></span>
+			</header>
+
+			<div class="body">
+				<ul>
+					<!-- products added to the cart will be inserted here using JavaScript -->
+				</ul>
+			</div>
+
+			<footer>
+				<a href="#0" class="checkout"><em>&nbsp &nbsp结算 - $<span>0</span></em></a>
+			</footer>
+		</div>
+	</div> <!-- .cd-cart -->
+</div>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
 <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
 <!--[if lt IE 9]>
-	<script src="js/selectivizr-and-extra-selectors.min.js"></script>
+<script src="js/selectivizr-and-extra-selectors.min.js"></script>
 <![endif]-->
 <script src="js/jquery.flexslider-min.js"></script>
 <!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
 <!-- <script src="js/jquery.gmap.min.js"></script> -->
 <script src="js/custom.js"></script>
 <script src="js/jquery.galleriffic.js"></script>
+<!-- <script src="js/jquery.min.js"></script> -->
+<script src="js/main.js"></script>
 </body>
 </html>
+
