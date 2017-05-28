@@ -91,7 +91,7 @@
 				</li>
 				<li><a href="alternative-blog.html">新闻</a></li>
 				<li><a href="sales-reps.html">价格报道</a></li>
-				<li><a href="compare-listings.html">Pages</a>
+				<li><a href="compare-listings.html">页面</a>
 					<ul>
 						<li><a href="compare-listings.html">比较列表</a></li>
 						<li><a href="404.html">404页面</a></li>

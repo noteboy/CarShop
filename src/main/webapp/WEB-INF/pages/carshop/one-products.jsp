@@ -36,15 +36,20 @@
 
 		<div class="widget-container widget_search">
 
-			<span class="call"><span>+1 234</span> 567-8901</span><br />
+			<li class="adds">
+				<c:if test="${!empty sessionScope.user}">
+					<a href="" style="color: #ab8071">${sessionScope.user["uName"]}</a>
+					欢迎您!
+				</c:if>
 
-			<span class="adds">12 Street, Los Angeles, CA, 94101</span>
+				<span  id="user_name_text"></span>
+			</li>
 
 			<form action="#" id="searchform" method="get" />
 
 			<p>
-				<input type="text" id="s" placeholder="Search" />
-				<button type="submit" id="searchsubmit"></button>
+				<input type="text" id="s" placeholder="搜索" />
+				<button type="submit" id="searchsubmit" ></button>
 			</p>
 
 			</form><!--/ #searchform-->
@@ -54,51 +59,51 @@
 		<nav id="navigation" class="navigation">
 
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li class="current-menu-item"><a href="all-listings.html">Browse By</a>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="all-listings.html">浏览</a>
 					<ul>
-						<li><a href="all-listings.html">All Listings</a></li>
-						<li class="current-menu-item"><a href="#">Manufacturer</a>
+						<li><a href="all-listings.html">所有列表</a></li>
+						<li><a href="#">厂商</a>
 							<ul>
-								<li class="current-menu-item"><a href="one-products.html">Aston Martin</a></li>
-								<li><a href="one-products.html">Audi</a></li>
-								<li><a href="one-products.html">BMW</a></li>
-								<li><a href="one-products.html">Chevrolet</a></li>
-								<li><a href="one-products.html">Mercedes Benz</a></li>
-								<li><a href="one-products.html">Ferrari</a></li>
-								<li><a href="one-products.html">Lexus</a></li>
-								<li><a href="one-products.html">Porsche</a></li>
-								<li><a href="one-products.html">Toyota</a></li>
+								<li><a href="one-products.html">阿斯顿马丁</a></li>
+								<li><a href="one-products.html">奥迪</a></li>
+								<li><a href="one-products.html">宝马</a></li>
+								<li><a href="one-products.html">雪佛兰</a></li>
+								<li><a href="one-products.html">梅赛德斯奔驰</a></li>
+								<li><a href="one-products.html">法拉利</a></li>
+								<li><a href="one-products.html">雷克萨斯</a></li>
+								<li><a href="one-products.html">保时捷</a></li>
+								<li><a href="one-products.html">丰田</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Body Type</a></li>
-						<li><a href="#">Engine Size</a></li>
-						<li><a href="#">Mileage</a></li>
-						<li><a href="#">Model Year</a></li>
-						<li><a href="#">Price Range</a></li>
-						<li><a href="#">Transmission</a></li>
+						<li><a href="#">车型</a></li>
+						<li><a href="#">发动机尺寸</a></li>
+						<li><a href="#">公里数</a></li>
+						<li><a href="#">年型</a></li>
+						<li><a href="#">价格幅度</a></li>
+						<li><a href="#">传动装置</a></li>
 					</ul>
 				</li>
-				<li><a href="blog.html">Blog</a>
+				<li><a href="blog.html">博客</a>
 					<ul>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="blog-single.html">Blog Single</a></li>
+						<li><a href="blog.html">博客</a></li>
+						<li><a href="blog-single.html">博客</a></li>
 					</ul>
 				</li>
-				<li><a href="alternative-blog.html">News</a></li>
-				<li><a href="sales-reps.html">Sales Reps</a></li>
-				<li><a href="compare-listings.html">Pages</a>
+				<li><a href="alternative-blog.html">新闻</a></li>
+				<li><a href="sales-reps.html">价格报道</a></li>
+				<li><a href="compare-listings.html">页面</a>
 					<ul>
-						<li><a href="compare-listings.html">Compare Listings</a></li>
-						<li><a href="404.html">404 Page</a></li>
-						<li><a href="image-and-floats.html">Images and Floats</a></li>
-						<li><a href="pricing-table.html">Pricing Tables</a></li>
-						<li><a href="typography.html">Typography</a></li>
-						<li><a href="toggle.html">FAQ Toggle</a></li>
-						<li><a href="columns.html">Column Layout</a></li>
+						<li><a href="compare-listings.html">比较列表</a></li>
+						<li><a href="404.html">404页面</a></li>
+						<li><a href="image-and-floats.html">图片</a></li>
+						<li><a href="pricing-table.html">价格表</a></li>
+						<li><a href="typography.html">排版</a></li>
+						<li><a href="../../../toggle.html">FAQ 标签</a></li>
+						<li><a href="columns.html">栅格布局</a></li>
 					</ul>
 				</li>
-				<li><a href="contact.html">Contacts</a></li>
+				<li><a href="contact.html">联系我们</a></li>
 			</ul>
 
 		</nav><!--/ #navigation-->
@@ -120,7 +125,7 @@
 
 				<article class="item clearfix">
 
-					<h2 class="title">Ferrari F12 Berlinetta 2012</h2>
+					<h2 class="title">法拉利 F12 伯林尼塔 2012款</h2>
 					<div id="gallery" class="gallery">
 
 						<div class="slideshow-container">
@@ -176,19 +181,19 @@
 
 					<div class="extra">
 
-						<b class="heading">Price:</b>
+						<b class="heading">价格:</b>
 
 						<span class="cost">$8,896.99</span>
 
 						<ul class="list type-1">
-							<li><b>Reg Number: </b><span>423423</span></li>
-							<li><b>Mileage: </b><span>20650</span></li>
-							<li><b>Body Type: </b><span>Sports</span></li>
-							<li><b>Model Year: </b><span>2002</span></li>
-							<li><b>Engine Size: </b><span>3.8L</span></li>
-							<li><b>Trans: </b><span>Manual</span></li>
-							<li><b>Fuel Type: </b><span>Gas</span></li>
-							<li><b>Owners: </b><span>1</span></li>
+							<li><b>车型号: </b><span>423423</span></li>
+							<li><b>公里数: </b><span>20650</span></li>
+							<li><b>车型: </b><span>运动型</span></li>
+							<li><b>车型年份: </b><span>2002年</span></li>
+							<li><b>发动机尺寸: </b><span>3.8L</span></li>
+							<li><b>变速器: </b><span>手动档</span></li>
+							<li><b>燃料: </b><span>汽油</span></li>
+							<li><b>已出售： </b><span>1辆</span></li>
 						</ul>
 						<button href="#0" class="button button-caution button-box button-jumbo add-button" data-price="8896.99" data-proid="4" data-proname="Ferrari F12" data-proimg="images\temp\item-1.jpg">添加到购物车</button>
 
@@ -207,7 +212,7 @@
 
 						<div class="video-box">
 
-							<b class="heading">Video:</b>
+							<b class="heading">视频预览:</b>
 
 							<a href="http://www.youtube.com/embed/CNP8DMCDjgw?feature=player_detailpage" class="video-image video-icon">
 								<img src="images/temp/list-thumb-1.jpg" alt="" />
@@ -215,34 +220,30 @@
 
 						</div><!--/ .video-box-->
 
-						<h3 class="section-title">VIN Information</h3>
+						<h3 class="section-title">车辆信息</h3>
 
 						<p>
-							Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-							mollit anim. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-							magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+							法拉利（Ferrari）是一家意大利汽车生产商，1929年由恩佐·法拉利（Enzo Ferrari）创办，
+							主要制造一级方程式赛车、赛车及高性能跑车。法拉利是世界闻名的赛车和运动跑车的生产厂家，
+							早期的法拉利赞助赛车手及生产赛车，1947年独立生产汽车。菲亚特（FIAT）拥有法拉利90%的股权，
+							但法拉利却能独立于菲亚特运营。法拉利汽车大部分采用手工制造，产量很低，截至2011年法拉利共交付7195台新车，
+							为法拉利史上最佳销售业绩。公司总部在意大利的马拉内罗（Maranello)。
 						</p>
 
 						<p>
-							Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-							esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-							in culpa qui officia deserunt mollit anim. Consectetur adipisicing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+							法拉利F12 Berlinetta是新一代的前置6.3升 V12动力车款，车头设计将与FF系出同门，经由在风洞中精雕细琢的车身造型，
+							车这款全新法拉利12缸跑车从静止加速到100km/h只需3.1秒，而0-200km/h仅需8.5秒。最大马力达到740Ps，最大功率740马力/8000rpm，最高时速将达到350km/h。
 						</p>
 
 						<div class="entry-tabs">
 
 							<ul class="tabs-nav">
 
-								<li><a href="#tab1">Specifications</a></li>
-								<li><a href="#tab2">Safety</a></li>
-								<li><a href="#tab3">Convenience</a></li>
-								<li><a href="#tab4">Comfort</a></li>
-								<li><a href="#tab5">Entertainment</a></li>
+								<li><a href="#tab1">规格</a></li>
+								<li><a href="#tab2">安全设备</a></li>
+								<li><a href="#tab3">便捷性</a></li>
+								<li><a href="#tab4">舒适性</a></li>
+								<li><a href="#tab5">娱乐性</a></li>
 
 							</ul><!--/ .tabs-nav -->
 
@@ -253,20 +254,20 @@
 									<div class="five columns">
 
 										<ul class="list type-1">
-											<li><b>Body Style: </b><span>SEDAN 4-DR</span></li>
-											<li><b>Driveline: </b><span>FWD</span></li>
-											<li><b>Fuel Economy-city: </b><span>30-32 miles/gallon</span></li>
-											<li><b>Anti-Brake System: </b><span>Non-ABS | 4-Wheel | ABS</span></li>
-											<li><b>Front Brake Type: </b><span>Disc</span></li>
-											<li><b>Turning Diameter: </b><span>36.10 in.</span></li>
-											<li><b>Rear Suspension: </b><span>Semi</span></li>
-											<li><b>Rear Spring Type: </b><span>Coil</span></li>
-											<li><b>Front Headroom: </b><span>39.10 in.</span></li>
-											<li><b>Front Legroom: </b><span>41.30 in.</span></li>
-											<li><b>Front Shoulder Room: </b><span>53.10 in.</span></li>
-											<li><b>Front Hip Room: </b><span>51.90 in.</span></li>
-											<li><b>Curb Weight-automatic: </b><span>2568 lbs</span></li>
-											<li><b>Overall Length: </b><span>178.30 in.</span></li>
+											<li><b>车型风格: </b><span>SEDAN 4-DR</span></li>
+											<li><b>传动装置: </b><span>FWD</span></li>
+											<li><b>耗油: </b><span>30-32 miles/gallon</span></li>
+											<li><b>防抱死制动系统: </b><span>Non-ABS | 4-Wheel | ABS</span></li>
+											<li><b>前制动类型: </b><span>Disc</span></li>
+											<li><b>转弯直径: </b><span>36.10 in.</span></li>
+											<li><b>后悬挂装置: </b><span>Semi</span></li>
+											<li><b>后弹簧类型: </b><span>Coil</span></li>
+											<li><b>前空间: </b><span>39.10 in.</span></li>
+											<li><b>前座腿部空间: </b><span>41.30 in.</span></li>
+											<li><b>前座肩部空间: </b><span>53.10 in.</span></li>
+											<li><b>前座股部空间: </b><span>51.90 in.</span></li>
+											<li><b>路边自重: </b><span>2568 lbs</span></li>
+											<li><b>总长度: </b><span>178.30 in.</span></li>
 										</ul>
 
 									</div>
@@ -274,14 +275,14 @@
 									<div class="five columns">
 
 										<ul class="list type-1">
-											<li><b>Overall Height: </b><span>58.50 in.</span></li>
-											<li><b>Ground Clearance: </b><span>5.70 in.</span></li>
-											<li><b>Track Front: </b><span>58.30 in.</span></li>
-											<li><b>Standard Seating: </b><span>5</span></li>
-											<li><b>Cargo Volume: </b><span>13.60 ft.</span></li>
-											<li><b>Maximum Towing: </b><span>1500 lbs</span></li>
-											<li><b>Basic-distance: </b><span>36.000 mile</span></li>
-											<li><b>Engine Type: </b><span>1.8L L4 DOHC 16V</span></li>
+											<li><b>总高度: </b><span>58.50 in.</span></li>
+											<li><b>离地净高: </b><span>5.70 in.</span></li>
+											<li><b>前轮距: </b><span>58.30 in.</span></li>
+											<li><b>标准化座位配置: </b><span>5</span></li>
+											<li><b>货量: </b><span>13.60 ft.</span></li>
+											<li><b>最大牵引力: </b><span>1500 lbs</span></li>
+											<li><b>基本距离: </b><span>36.000 mile</span></li>
+											<li><b>发动机类型: </b><span>1.8L L4 DOHC 16V</span></li>
 										</ul>
 
 									</div>
@@ -425,33 +426,33 @@
 
 						</div><!--/ .entry-tabs-->
 
-						<h3 class="section-title">Contact Us regarding this car</h3>
+						<h3 class="section-title">关于本车更多详细参数请联系我们</h3>
 
 						<form method="post" action="" class="comments-form" />
 
 						<p class="input-block">
-							<label for="name">Your Name (required)</label>
+							<label for="name">您的名字 (必填)</label>
 							<input type="text" name="name" id="name" />
 						</p>
 
 						<p class="input-block">
-							<label for="email">Your Email (required)</label>
+							<label for="email">您的邮箱 (必填)</label>
 							<input type="text" name="email" id="email" />
 						</p>
 
 						<p class="input-block">
-							<label for="web">Website</label>
+							<label for="web">网站</label>
 							<input type="text" name="web" id="web" />
 						</p>
 
 						<p class="input-block">
-							<label for="comments">You Message: (required)</label>
+							<label for="comments">您需要了解的信息: (必填)</label>
 							<textarea name="comments" id="comments" cols="30" rows="10"></textarea>
 						</p>
 
 						<p class="input-block">
 							<label>&nbsp;</label>
-							<button class="button orange" type="submit" id="submit">Submit</button>
+							<button class="button orange" type="submit" id="submit">提交</button>
 						</p>
 
 						</form><!--/ .contact-form-->
@@ -469,116 +470,98 @@
 
 			<aside id="sidebar" class="four columns">
 
-				<div class="widget-container widget_custom_search">
+				<div class="widget_custom_search">
 
-					<h3 class="widget-title">Quick Search</h3>
+					<h3 class="widget-title">快捷搜索</h3>
 
 					<form action="/" id="boxpanel" class="form-panel" />
 
 					<fieldset>
-						<label for="manufacturer">Manufacturer:</label>
+						<label for="manufacturer">厂商:</label>
 						<select id="manufacturer" name="manufacturer">
-							<option value="0" />Any
-							<option value="1" />Lorem
-							<option value="2" />Ipsum
+							<c:forEach items="${allBank}" var="bank">
+								<option value="${bank}" name="${bank}"/>${bank}
+								<%--<option value="1" />宝马--%>
+								<%--<option value="2" />奥迪--%>
+							</c:forEach>
 						</select>
 					</fieldset>
 
 					<fieldset>
-						<label for="minprice">Min Price:</label>
+						<label for="minprice">最低价:</label>
 						<select id="minprice" name="minprice">
-							<option value="0" />No min
-							<option value="1" />Lorem
-							<option value="2" />Ipsum
+							<option value="1" />￥10000
+							<option value="2" />￥500000
 						</select>
 					</fieldset>
 
 					<fieldset>
-						<label for="maxprice">Max Price:</label>
+						<label for="maxprice">最高价：</label>
 						<select id="maxprice" name="maxprice">
-							<option value="0" />No max
-							<option value="1" />Lorem
-							<option value="2" />Ipsum
+							<option value="1" />1000000
+							<option value="2" />5000000
 						</select>
 					</fieldset>
 
 					<fieldset>
-						<label for="trans">Trans:</label>
-						<select id="trans" name="trans">
-							<option value="0" />Any
-							<option value="1" />Lorem
-							<option value="2" />Ipsum
-						</select>
-					</fieldset>
-
-					<fieldset>
-						<label for="mileage">Mileage:</label>
-						<select id="mileage" name="mileage">
-							<option value="0" />Any
-							<option value="1" />Lorem
-							<option value="2" />Ipsum
-						</select>
-					</fieldset>
-
-					<fieldset>
-						<label for="bodytype">Body Type:</label>
-						<select id="bodytype" name="bodytype">
-							<option value="0" />Any
-							<option value="1" />Lorem
-							<option value="2" />Ipsum
+						<label for="bodytype">车型:</label>
+						<select id="bodytype" name="type">
+							<c:forEach items="${allCarType}" var="carType">
+								<option value="${carType}" name="${carType}"/>${carType}
+								<%--<option value="1" />宝马--%>
+								<%--<option value="2" />奥迪--%>
+							</c:forEach>
 						</select>
 					</fieldset>
 
 					<div class="clear"></div>
-					<button id="submitSearch" class="submit-search" type="submit">Search</button>
+					<button id="submitSearch" class="submit-search" type="submit">搜索</button>
 
 					</form><!--/ .form-panel-->
 
-				</div><!--/ .widget-container-->
+				</div><!--/ .main-search-panel-->
 
 				<div class="widget-container widget_loan_calculator">
 
 					<div class="widget-head">
-
-						<h3 class="widget-title">Loan Calculator</h3>
-
+						<h3 class="widget-title">贷款计算器</h3>
 					</div>
 
 					<div class="entry-loan">
 
 						<table>
 							<tr>
-								<td><label for="loan_amount">Loan Amount</label></td>
+								<td><label for="loan_amount">贷款额</label></td>
 								<td><input id="loan_amount" type="text" value="0.00" /></td>
 								<td>$</td>
 							</tr>
 							<tr>
-								<td><label for="payment">Down Payment</label></td>
+								<td><label for="payment">预付定金</label></td>
 								<td><input id="payment" type="text" value="0.00" /></td>
 								<td>$</td>
 							</tr>
 							<tr>
-								<td><label for="rate">Annual Rate</label></td>
+								<td><label for="rate">年付</label></td>
 								<td><input id="rate" type="text" value="0.00" /></td>
 								<td>%</td>
 							</tr>
 							<tr>
-								<td><label for="term">Term</label></td>
+								<td><label for="term">期限</label></td>
 								<td><input id="term" type="text" value="0.00" /></td>
 								<td>Yrs</td>
 							</tr>
 							<tr>
 								<td>
-									<a id="buttonCalculate" href="#" class="button orange">Calculate</a>
+									<a id="buttonCalculate" href="#" class="button orange">计算</a>
 								</td>
 							</tr>
 							<tr>
-								<td><label for="payments">Payments</label></td>
+								<td><label for="payments">支付</label></td>
 								<td><input id="payments" type="text" value="0.00" /></td>
 								<td></td>
 							</tr>
 							<tr>
-								<td><label for="mpayment">Monthly Payment</label></td>
+								<td><label for="mpayment">每月支付</label></td>
 								<td><input id="mpayment" type="text" value="0.00" /></td>
 								<td>$</td>
 							</tr>
@@ -590,15 +573,15 @@
 
 				<div class="widget-container widget_recent_entries">
 
-					<h3 class="widget-title">Recent News</h3>
+					<h3 class="widget-title">最新车闻</h3>
 
 					<ul>
-						<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing</a></li>
-						<li><a href="#">Ipsum dolor sit amet, consectetur adipisicing</a></li>
-						<li><a href="#">Set magna ipsum dolor sit amet, consectetur adipisicing</a></li>
+						<li><a href="#">降价榜:蒙迪欧降至15.48万</a></li>
+						<li><a href="#">吉利远景X1上市3.99万起</a></li>
+						<li><a href="#">优惠:2017款奥迪Q5直降7万</a></li>
 					</ul>
 
-					<a href="#" class="see">See all news</a>
+					<a href="#" class="see">查看所有新闻</a>
 
 				</div><!--/ .widget-container-->
 
@@ -621,7 +604,7 @@
 
 			<div class="adjective clearfix">
 
-				<p class="copyright">Copyright &copy; 2013. ThemeMakers. All rights reserved.Collect from <a href="http://www.777moban.com/" title="网页模板" target="_blank">网页模板</a></p>
+				<p class="copyright">版权所有 &copy; 2017. 内蒙古大学. 技术支持 <a href="http://www.imudges.com/" title="网页模板" target="_blank">IMUDGES</a></p>
 
 			</div><!--/ .adjective-->
 
@@ -637,7 +620,7 @@
 
 	<form class="form-reg" method="post" action="" />
 
-	<a href="#" class="log">Login</a>
+	<a href="#" class="log" style="width: 70px">Login</a>
 
 	<p>
 		<label>Username*</label>
