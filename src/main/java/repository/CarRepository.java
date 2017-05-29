@@ -3,8 +3,10 @@ package repository;
 
 import model.CarEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -31,4 +33,14 @@ public interface CarRepository extends JpaRepository<CarEntity, Integer> {
             "car.cPrice>=:minPrice and car.cPrice<=:maxPrice ")
     public List<CarEntity> queryCarByCondition(String cBand
     ,String minPrice,String maxPrice, String cType);
+
+
+    @Modifying      // 说明该方法是修改操作
+    @Transactional  // 说明该方法是事务性操作
+    // 定义查询
+    // @Param注解用于提取参数
+    @Query("update CarEntity us set us.cName=:cName, us.cBand=:cBand, us.cColor=:cColor, us.cPrice=:cPrice, us.cType=:cType where us.cId=:cId")
+    public void updateUser(@Param("cName") String cName, @Param("cBand") String cBand,
+                           @Param("cColor") String cColor, @Param("cPrice") String cPrice , @Param("cType") String cType, @Param("cId") Integer cId);
+
 }

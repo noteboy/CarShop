@@ -5,6 +5,7 @@ package controller;
  */
 
 
+import model.CarEntity;
 import model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,8 +14,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import repository.CarRepository;
 import repository.CustomerRepository;
 import repository.UserRepository;
+import service.implement.CarServicelmpl;
+
+import java.util.List;
 
 @Controller
 public class AdminController {
@@ -23,7 +28,10 @@ public class AdminController {
     UserRepository userRepository;
     @Autowired
     CustomerRepository customerRepository;
-
+    @Autowired
+    CarRepository carRepository;
+    @Autowired
+    CarServicelmpl carServicelmpl;
 
 
     // 查看用户详情
@@ -72,5 +80,58 @@ public class AdminController {
         // 立即刷新
         userRepository.flush();
         return "redirect:/admin/user/users";
+    }
+///////////////////////汽车管理///////////////////////////
+
+    @RequestMapping(value = "/admin/car/cars", method = RequestMethod.GET)
+    public String getCars(ModelMap modelMap) {
+        List<CarEntity> carList = carServicelmpl.queryAllCar();
+        //List<CarEntity> carList = carRepository.findAll();
+        modelMap.addAttribute("carList", carList);
+        return "admin/car/cars";
+    }
+
+    @RequestMapping(value = "/admin/cars/delete/{id}", method = RequestMethod.GET)
+    public String deleteCar(@PathVariable("id") Integer userId) {
+        carServicelmpl.deleteCar(userId);
+        return "redirect:/admin/car/cars";
+    }
+
+    @RequestMapping(value = "/admin/cars/add", method = RequestMethod.GET)
+    public String addCar() {
+        return "admin/car/addCar";
+    }
+
+
+    @RequestMapping(value = "/admin/cars/addP", method = RequestMethod.POST)
+    public String addcarPost(@ModelAttribute("car") CarEntity carEntity) {
+
+        carServicelmpl.addCar(carEntity);
+        return "redirect:/admin/user/users";
+    }
+
+    @RequestMapping(value = "/admin/cars/update/{id}", method = RequestMethod.GET)
+    public String updateCar(@PathVariable("id") Integer carId, ModelMap modelMap) {
+        CarEntity carEntity = carRepository.findOne(carId);
+        modelMap.addAttribute("car", carEntity);
+        return "admin/car/updateCar";
+    }
+
+    @RequestMapping(value = "/admin/cars/updateP", method = RequestMethod.POST)
+    public String updateCarPost(@ModelAttribute("carP") CarEntity car) {
+
+        carServicelmpl.updateCar(car);
+        return "redirect:/admin/car/cars";
+    }
+
+    @RequestMapping(value = "/admin/cars/show/{id}", method = RequestMethod.GET)
+    public String showCar(@PathVariable("id") Integer carId, ModelMap modelMap) {
+
+        // 找到userId所表示的用户
+        CarEntity carEntity = carRepository.findOne(carId);
+
+        // 传递给请求页面
+        modelMap.addAttribute("car", carEntity);
+        return "admin/car/carDetails";
     }
 }

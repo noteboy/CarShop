@@ -14,6 +14,7 @@
     <!--指明 controller 所在包，并扫描其中的注解-->
     <context:component-scan base-package="controller"/>
     <!-- 扫描service包下所有的使用注解的类型,service包及其子包中的所有类 -->
+    <context:component-scan base-package="service.implement"/>
     <context:component-scan base-package="service"/>
     <!-- 扫描tools包下所有的使用注解的类型,service包及其子包中的所有类 -->
     <context:component-scan base-package="tools"/>
