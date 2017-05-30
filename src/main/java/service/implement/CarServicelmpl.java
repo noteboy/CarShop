@@ -6,12 +6,12 @@ package service.implement;
 
 import model.CarEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import repository.CarRepository;
 import repository.CustomerRepository;
 import repository.UserRepository;
 import service.CarService;
+
 import java.util.List;
 
 
@@ -50,4 +50,15 @@ public class CarServicelmpl implements CarService{
     public void updateCar(CarEntity car){
         carRepository.updateUser(car.getcName(),car.getcBand(),car.getcColor(),car.getcPrice(),car.getcType(),car.getcId());
     }
+
+    @Override
+    public List<CarEntity> queryCarByCondition(String cBand, int minPrice,int maxPrice, String cType) {
+        return carRepository.queryCarByCondition(cBand,minPrice,maxPrice,cType);
+    }
+
+    @Override
+    public CarEntity getCarById(int carId) {
+        return carRepository.queryCarById(carId);
+    }
+
 }

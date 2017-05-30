@@ -230,5 +230,16 @@ ALTER TABLE `vipcustomer`
 ALTER TABLE `car` ADD `imgurl` VARCHAR(100) ;
 --
 INSERT INTO `car` (`c_id`, `c_name`, `c_price`, `c_type`, `c_band`, `c_color`, `imgurl`) VALUES (NULL, '宝马x6', '60', '小型', '宝马', '白色', NULL);
+insert into car (c_name,c_price,c_type,c_band,c_color,imgurl)values('A4L' ,43,'轿车','奥迪','白色',"carimagurl/奥迪A4L.jpg");
+insert into car (c_name,c_price,c_type,c_band,c_color,imgurl)values('A6L' ,75.8,'轿车','奥迪','黑色',"carimagurl/奥迪A6L.jpg");
+insert into car (c_name,c_price,c_type,c_band,c_color,imgurl)values('Q5' ,56.7,'轿车','奥迪','白色',"carimagurl/奥迪Q5.jpg");
+insert into car (c_name,c_price,c_type,c_band,c_color,imgurl)values('A3',28.1,'轿车','奥迪','白色',"carimagurl/奥迪A3.jpg");
+
+insert into car (c_name,c_price,c_type,c_band,c_color,imgurl)values('Q3',35.78,'轿车','奥迪','黄色',"carimagurl/奥迪Q3.jpg");
+
+insert into car (c_name,c_price,c_type,c_band,c_color,imgurl)values('A8L',256.8,'轿车','奥迪','黑色',"carimagurl/奥迪A8L.jpg");
+
+insert into car (c_name,c_price,c_type,c_band,c_color,imgurl)values('A1',29.98,'轿车','奥迪','灰色',"carimagurl/奥迪A1.jpg");
+
 
 

@@ -15,4 +15,7 @@ public interface CarService {
     public void deleteCar(int id);
     public void addCar(CarEntity carEntity);
     public void updateCar(CarEntity car);
+    public List<CarEntity> queryCarByCondition(String cBand
+            ,int minPrice,int maxPrice, String cType);
+    public CarEntity getCarById(int carId);
 }

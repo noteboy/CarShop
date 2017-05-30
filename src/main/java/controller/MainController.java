@@ -5,6 +5,7 @@ package controller;
  */
 
 
+import model.CarEntity;
 import model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,8 +13,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import repository.CustomerRepository;
 import repository.UserRepository;
+import service.CarService;
 import tools.CarMessage;
 
 import java.util.List;
@@ -27,9 +28,10 @@ public class MainController {
     @Autowired
     UserRepository userRepository;
     @Autowired
-    CustomerRepository customerRepository;
-    @Autowired
     CarMessage carMessage;
+
+    @Autowired
+    CarService carService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(ModelMap modelMap) {
@@ -80,23 +82,35 @@ public class MainController {
         return "redirect:/admin/user/users";
     }
     @RequestMapping(value = "/carshop",method = RequestMethod.GET)
-    public String text(ModelMap modelMap){
+    public String firstPage(ModelMap modelMap){
         List<String> carBank = carMessage.getBankType();
         System.out.println("汽车的品牌个数："+carBank.size());
         List<String> carType = carMessage.getCarType();
-//        List<CarEntity> frontSixCar = carMessage.getFrontSixCar(6);
+        List<CarEntity> frontSixCar = carMessage.getFrontSixCar(6);
         modelMap.addAttribute("allBank",carBank);//添加数据库商标的类型
         modelMap.addAttribute("allCarType",carType);//汽车类型
-  //      modelMap.addAttribute("frontSixCar",frontSixCar);//前六个汽车
+        modelMap.addAttribute("frontSixCar",frontSixCar);//前六个汽车
         return "carshop/index";
     }
     @RequestMapping(value = "/details",method = RequestMethod.GET)
-    public String getDetails(){
+    public String getDetails(String carId,ModelMap modelMap){
+        System.out.println("carId:" + carId);
+        CarEntity carEntity = carService.getCarById(Integer.parseInt(carId));
+        modelMap.addAttribute("Car",carEntity);
+        List<String> carBank = carMessage.getBankType();
+        //System.out.println("汽车的品牌个数："+carBank.size());
+        List<String> carType = carMessage.getCarType();
+        modelMap.addAttribute("allBank",carBank);//添加数据库商标的类型
+        modelMap.addAttribute("allCarType",carType);//汽车类型
         return "carshop/one-products";
     }
     @RequestMapping(value = "/quickSearch",method = RequestMethod.GET)
     public String quickSearch(String manufacturer,String minprice,String maxprice,String type,
     ModelMap modelMap ){
+        List<CarEntity> allSearchCar = carService.queryCarByCondition(manufacturer,Integer.parseInt(minprice),
+                Integer.parseInt(maxprice),type);
+        modelMap.addAttribute("allSearchCar",allSearchCar);
+        System.out.println(allSearchCar.size());
         return "carshop/all-listings";
     }
 }

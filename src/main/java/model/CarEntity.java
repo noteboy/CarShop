@@ -3,14 +3,14 @@ package model;
 import javax.persistence.*;
 
 /**
- * Created by liuxiaolong on 2017/5/18.
+ * Created by Administrator on 2017/5/30 0030.
  */
 @Entity
 @Table(name = "car", schema = "carshop", catalog = "")
 public class CarEntity {
     private int cId;
     private String cName;
-    private String cPrice;
+    private int cPrice;
     private String cType;
     private String cBand;
     private String cColor;
@@ -37,12 +37,12 @@ public class CarEntity {
     }
 
     @Basic
-    @Column(name = "c_price", nullable = false, length = 40)
-    public String getcPrice() {
+    @Column(name = "c_price", nullable = false)
+    public int getcPrice() {
         return cPrice;
     }
 
-    public void setcPrice(String cPrice) {
+    public void setcPrice(int cPrice) {
         this.cPrice = cPrice;
     }
 
@@ -76,34 +76,6 @@ public class CarEntity {
         this.cColor = cColor;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        CarEntity carEntity = (CarEntity) o;
-
-        if (cId != carEntity.cId) return false;
-        if (cName != null ? !cName.equals(carEntity.cName) : carEntity.cName != null) return false;
-        if (cPrice != null ? !cPrice.equals(carEntity.cPrice) : carEntity.cPrice != null) return false;
-        if (cType != null ? !cType.equals(carEntity.cType) : carEntity.cType != null) return false;
-        if (cBand != null ? !cBand.equals(carEntity.cBand) : carEntity.cBand != null) return false;
-        if (cColor != null ? !cColor.equals(carEntity.cColor) : carEntity.cColor != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = cId;
-        result = 31 * result + (cName != null ? cName.hashCode() : 0);
-        result = 31 * result + (cPrice != null ? cPrice.hashCode() : 0);
-        result = 31 * result + (cType != null ? cType.hashCode() : 0);
-        result = 31 * result + (cBand != null ? cBand.hashCode() : 0);
-        result = 31 * result + (cColor != null ? cColor.hashCode() : 0);
-        return result;
-    }
-
     @Basic
     @Column(name = "imgurl", nullable = true, length = 100)
     public String getImgurl() {
@@ -112,5 +84,35 @@ public class CarEntity {
 
     public void setImgurl(String imgurl) {
         this.imgurl = imgurl;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CarEntity carEntity = (CarEntity) o;
+
+        if (cId != carEntity.cId) return false;
+        if (cPrice != carEntity.cPrice) return false;
+        if (cName != null ? !cName.equals(carEntity.cName) : carEntity.cName != null) return false;
+        if (cType != null ? !cType.equals(carEntity.cType) : carEntity.cType != null) return false;
+        if (cBand != null ? !cBand.equals(carEntity.cBand) : carEntity.cBand != null) return false;
+        if (cColor != null ? !cColor.equals(carEntity.cColor) : carEntity.cColor != null) return false;
+        if (imgurl != null ? !imgurl.equals(carEntity.imgurl) : carEntity.imgurl != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = cId;
+        result = 31 * result + (cName != null ? cName.hashCode() : 0);
+        result = 31 * result + cPrice;
+        result = 31 * result + (cType != null ? cType.hashCode() : 0);
+        result = 31 * result + (cBand != null ? cBand.hashCode() : 0);
+        result = 31 * result + (cColor != null ? cColor.hashCode() : 0);
+        result = 31 * result + (imgurl != null ? imgurl.hashCode() : 0);
+        return result;
     }
 }

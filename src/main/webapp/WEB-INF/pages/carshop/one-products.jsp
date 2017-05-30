@@ -125,7 +125,7 @@
 
 				<article class="item clearfix">
 
-					<h2 class="title">法拉利 F12 伯林尼塔 2012款</h2>
+					<h2 class="title">${Car.cName}</h2>
 					<div id="gallery" class="gallery">
 
 						<div class="slideshow-container">
@@ -138,40 +138,40 @@
 							<ul class="thumbs list-image clearfix">
 
 								<li>
-									<a class="thumb" name="leaf" href="images/temp/item-1.jpg" title="Title 0">
-										<img src="images/temp/list-thumb-1.jpg" alt="Title #1" />
+									<a class="thumb" name="leaf" href="${Car.imgurl}" title="Title 0">
+										<%--<img src="images/temp/list-thumb-1.jpg" alt="Title #1" />--%>
 									</a>
 								</li>
 
-								<li>
-									<a class="thumb" name="drop" href="images/temp/item-2.jpg" title="Title 1">
-										<img src="images/temp/list-thumb-2.jpg" alt="Title #2" />
-									</a>
-								</li>
+								<%--<li>--%>
+									<%--<a class="thumb" name="drop" href="images/temp/item-2.jpg" title="Title 1">--%>
+										<%--<img src="images/temp/list-thumb-2.jpg" alt="Title #2" />--%>
+									<%--</a>--%>
+								<%--</li>--%>
 
-								<li>
-									<a class="thumb" name="leaf" href="images/temp/item-3.jpg" title="Title 2">
-										<img src="images/temp/list-thumb-3.jpg" alt="Title #3" />
-									</a>
-								</li>
+								<%--<li>--%>
+									<%--<a class="thumb" name="leaf" href="${Car.imgurl}" title="Title 2">--%>
+										<%--<img src="${Car.imgurl}" alt="Title #3" />--%>
+									<%--</a>--%>
+								<%--</li>--%>
 
-								<li>
-									<a class="thumb" name="leaf" href="images/temp/item-4.jpg" title="Title 3">
-										<img src="images/temp/list-thumb-4.jpg" alt="Title #4" />
-									</a>
-								</li>
+								<%--<li>--%>
+									<%--<a class="thumb" name="leaf" href="images/temp/item-4.jpg" title="Title 3">--%>
+										<%--<img src="images/temp/list-thumb-4.jpg" alt="Title #4" />--%>
+									<%--</a>--%>
+								<%--</li>--%>
 
-								<li>
-									<a class="thumb" name="leaf" href="images/temp/item-5.jpg" title="Title 4">
-										<img src="images/temp/list-thumb-5.jpg" alt="Title #5" />
-									</a>
-								</li>
+								<%--<li>--%>
+									<%--<a class="thumb" name="leaf" href="images/temp/item-5.jpg" title="Title 4">--%>
+										<%--<img src="images/temp/list-thumb-5.jpg" alt="Title #5" />--%>
+									<%--</a>--%>
+								<%--</li>--%>
 
-								<li>
-									<a class="thumb" name="leaf" href="images/temp/item-6.jpg" title="Title 5">
-										<img src="images/temp/list-thumb-6.jpg" alt="Title #6" />
-									</a>
-								</li>
+								<%--<li>--%>
+									<%--<a class="thumb" name="leaf" href="images/temp/item-6.jpg" title="Title 5">--%>
+										<%--<img src="images/temp/list-thumb-6.jpg" alt="Title #6" />--%>
+									<%--</a>--%>
+								<%--</li>--%>
 
 							</ul><!--/ .thumbs-->
 
@@ -183,12 +183,12 @@
 
 						<b class="heading">价格:</b>
 
-						<span class="cost">$8,896.99</span>
+						<span class="cost">$${Car.cPrice}万</span>
 
 						<ul class="list type-1">
 							<li><b>车型号: </b><span>423423</span></li>
 							<li><b>公里数: </b><span>20650</span></li>
-							<li><b>车型: </b><span>运动型</span></li>
+							<li><b>车型: </b><span>${Car.cType}</span></li>
 							<li><b>车型年份: </b><span>2002年</span></li>
 							<li><b>发动机尺寸: </b><span>3.8L</span></li>
 							<li><b>变速器: </b><span>手动档</span></li>
@@ -215,7 +215,7 @@
 							<b class="heading">视频预览:</b>
 
 							<a href="http://www.youtube.com/embed/CNP8DMCDjgw?feature=player_detailpage" class="video-image video-icon">
-								<img src="images/temp/list-thumb-1.jpg" alt="" />
+								<img src="${Car.imgurl}" alt="" />
 							</a>
 
 						</div><!--/ .video-box-->
@@ -474,7 +474,7 @@
 
 					<h3 class="widget-title">快捷搜索</h3>
 
-					<form action="/" id="boxpanel" class="form-panel" />
+					<form action="/quickSearch" id="boxpanel" class="form-panel" />
 
 					<fieldset>
 						<label for="manufacturer">厂商:</label>
@@ -491,15 +491,15 @@
 						<label for="minprice">最低价:</label>
 						<select id="minprice" name="minprice">
 							<option value="1" />￥10000
-							<option value="2" />￥500000
+							<option value="50" />￥500000
 						</select>
 					</fieldset>
 
 					<fieldset>
 						<label for="maxprice">最高价：</label>
 						<select id="maxprice" name="maxprice">
-							<option value="1" />1000000
-							<option value="2" />5000000
+							<option value="100" />1000000
+							<option value="500" />5000000
 						</select>
 					</fieldset>
 

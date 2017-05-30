@@ -10,6 +10,7 @@
         <class>model.OrderformEntity</class>
         <class>model.ShopcarEntity</class>
         <class>model.VipcustomerEntity</class>
+        <class>tools.CarEntity</class>
         <properties>
             <!-- 使用MySQL方言 -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>

@@ -121,186 +121,185 @@
 					<h3 class="widget-title"><span>Recent</span> Automobiles</h3>
 
 					<ul class="recent-list-cars clearfix">
-
+					<c:forEach items="${allSearchCar}" var="car">
 						<li>
 							<a href="one-products.html" class="single-image picture">
-								<img src="images/temp/thumb-1.jpg" alt="" />
+								<img src="${car.imgurl}" alt="" />
 							</a>
 
 							<a href="one-products.html" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
+								<h6 class="title-list-item">${car.cName}</h6>
 							</a>
 
 							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
+								<span class="cost">$${car.cPrice}万</span>
+								<span>${car.cBand}</span> <br />
 							</div><!--/ .detailed-->
 
 							<a href="one-products.html" class="button orange">Details</a>
 							<label class="compare"><input type="checkbox" />Compare</label>
 
 						</li>
+					</c:forEach>
+						<%--<li>--%>
+							<%--<a href="one-products.html" class="single-image picture">--%>
+								<%--<img src="images/temp/thumb-2.jpg" alt="" />--%>
+							<%--</a>--%>
 
-						<li>
-							<a href="one-products.html" class="single-image picture">
-								<img src="images/temp/thumb-2.jpg" alt="" />
-							</a>
+							<%--<a href="one-products.html" class="list-meta">--%>
+								<%--<h6 class="title-list-item">2009 Aston Martin DB9</h6>--%>
+							<%--</a>--%>
 
-							<a href="one-products.html" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
+							<%--<div class="detailed">--%>
+								<%--<span class="cost">$8.966</span>--%>
+								<%--<span>1.4i TS 5Dr</span> <br />--%>
+								<%--<b>23000 Miles</b>--%>
+							<%--</div><!--/ .detailed-->--%>
 
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
-							</div><!--/ .detailed-->
+							<%--<a href="one-products.html" class="button orange">Details</a>--%>
+							<%--<label class="compare"><input type="checkbox" />Compare</label>--%>
 
-							<a href="one-products.html" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+						<%--</li>--%>
 
-						</li>
+						<%--<li>--%>
+							<%--<a href="one-products.html" class="single-image picture video">--%>
+								<%--<img src="images/temp/thumb-3.jpg" alt="" />--%>
+							<%--</a>--%>
 
-						<li>
-							<a href="one-products.html" class="single-image picture video">
-								<img src="images/temp/thumb-3.jpg" alt="" />
-							</a>
+							<%--<a href="one-products.html" class="list-meta">--%>
+								<%--<h6 class="title-list-item">2009 Aston Martin DB9</h6>--%>
+							<%--</a>--%>
 
-							<a href="one-products.html" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
+							<%--<div class="detailed">--%>
+								<%--<span class="cost">$8.966</span>--%>
+								<%--<span>1.4i TS 5Dr</span> <br />--%>
+								<%--<b>23000 Miles</b>--%>
+							<%--</div><!--/ .detailed-->--%>
 
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
-							</div><!--/ .detailed-->
+							<%--<a href="one-products.html" class="button orange">Details</a>--%>
+							<%--<label class="compare"><input type="checkbox" />Compare</label>--%>
 
-							<a href="one-products.html" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+						<%--</li>--%>
 
-						</li>
+						<%--<li>--%>
+							<%--<a href="one-products.html" class="single-image picture">--%>
+								<%--<img src="images/temp/no-thumb.jpg" alt="" />--%>
+							<%--</a>--%>
 
-						<li>
-							<a href="one-products.html" class="single-image picture">
-								<img src="images/temp/no-thumb.jpg" alt="" />
-							</a>
+							<%--<a href="one-products.html" class="list-meta">--%>
+								<%--<h6 class="title-list-item">2009 Aston Martin DB9</h6>--%>
+							<%--</a>--%>
 
-							<a href="one-products.html" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
+							<%--<div class="detailed">--%>
+								<%--<span class="cost">$8.966</span>--%>
+								<%--<span>1.4i TS 5Dr</span> <br />--%>
+								<%--<b>23000 Miles</b>--%>
+							<%--</div><!--/ .detailed-->--%>
 
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
-							</div><!--/ .detailed-->
+							<%--<a href="one-products.html" class="button orange">Details</a>--%>
+							<%--<label class="compare"><input type="checkbox" />Compare</label>--%>
 
-							<a href="one-products.html" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+						<%--</li>--%>
 
-						</li>
+						<%--<li>--%>
+							<%--<a href="one-products.html" class="single-image picture video">--%>
+								<%--<img src="images/temp/thumb-4.jpg" alt="" />--%>
+							<%--</a>--%>
 
-						<li>
-							<a href="one-products.html" class="single-image picture video">
-								<img src="images/temp/thumb-4.jpg" alt="" />
-							</a>
+							<%--<a href="one-products.html" class="list-meta">--%>
+								<%--<h6 class="title-list-item">2009 Aston Martin DB9</h6>--%>
+							<%--</a>--%>
 
-							<a href="one-products.html" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
+							<%--<div class="detailed">--%>
+								<%--<span class="cost">$8.966</span>--%>
+								<%--<span>1.4i TS 5Dr</span> <br />--%>
+								<%--<b>23000 Miles</b>--%>
+							<%--</div><!--/ .detailed-->--%>
 
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
-							</div><!--/ .detailed-->
+							<%--<a href="one-products.html" class="button orange">Details</a>--%>
+							<%--<label class="compare"><input type="checkbox" />Compare</label>--%>
 
-							<a href="one-products.html" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+						<%--</li>--%>
 
-						</li>
+						<%--<li>--%>
+							<%--<a href="one-products.html" class="single-image picture">--%>
+								<%--<img src="images/temp/thumb-5.jpg" alt="" />--%>
+							<%--</a>--%>
 
-						<li>
-							<a href="one-products.html" class="single-image picture">
-								<img src="images/temp/thumb-5.jpg" alt="" />
-							</a>
+							<%--<a href="one-products.html" class="list-meta">--%>
+								<%--<h6 class="title-list-item">2009 Aston Martin DB9</h6>--%>
+							<%--</a>--%>
 
-							<a href="one-products.html" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
+							<%--<div class="detailed">--%>
+								<%--<span class="cost">$8.966</span>--%>
+								<%--<span>1.4i TS 5Dr</span> <br />--%>
+								<%--<b>23000 Miles</b>--%>
+							<%--</div><!--/ .detailed-->--%>
 
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
-							</div><!--/ .detailed-->
+							<%--<a href="one-products.html" class="button orange">Details</a>--%>
+							<%--<label class="compare"><input type="checkbox" />Compare</label>--%>
 
-							<a href="one-products.html" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+						<%--</li>--%>
 
-						</li>
+						<%--<li>--%>
+							<%--<a href="one-products.html" class="single-image picture">--%>
+								<%--<img src="images/temp/thumb-5.jpg" alt="" />--%>
+							<%--</a>--%>
 
-						<li>
-							<a href="one-products.html" class="single-image picture">
-								<img src="images/temp/thumb-5.jpg" alt="" />
-							</a>
+							<%--<a href="one-products.html" class="list-meta">--%>
+								<%--<h6 class="title-list-item">2009 Aston Martin DB9</h6>--%>
+							<%--</a>--%>
 
-							<a href="one-products.html" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
+							<%--<div class="detailed">--%>
+								<%--<span class="cost">$8.966</span>--%>
+								<%--<span>1.4i TS 5Dr</span> <br />--%>
+								<%--<b>23000 Miles</b>--%>
+							<%--</div><!--/ .detailed-->--%>
 
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
-							</div><!--/ .detailed-->
+							<%--<a href="one-products.html" class="button orange">Details</a>--%>
+							<%--<label class="compare"><input type="checkbox" />Compare</label>--%>
 
-							<a href="one-products.html" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+						<%--</li>--%>
 
-						</li>
+						<%--<li>--%>
+							<%--<a href="one-products.html" class="single-image picture">--%>
+								<%--<img src="images/temp/no-thumb.jpg" alt="" />--%>
+							<%--</a>--%>
 
-						<li>
-							<a href="one-products.html" class="single-image picture">
-								<img src="images/temp/no-thumb.jpg" alt="" />
-							</a>
+							<%--<a href="one-products.html" class="list-meta">--%>
+								<%--<h6 class="title-list-item">2009 Aston Martin DB9</h6>--%>
+							<%--</a>--%>
 
-							<a href="one-products.html" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
+							<%--<div class="detailed">--%>
+								<%--<span class="cost">$8.966</span>--%>
+								<%--<span>1.4i TS 5Dr</span> <br />--%>
+								<%--<b>23000 Miles</b>--%>
+							<%--</div><!--/ .detailed-->--%>
 
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
-							</div><!--/ .detailed-->
+							<%--<a href="one-products.html" class="button orange">Details</a>--%>
+							<%--<label class="compare"><input type="checkbox" />Compare</label>--%>
 
-							<a href="one-products.html" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
+						<%--</li>--%>
 
-						</li>
+						<%--<li>--%>
+							<%--<a href="one-products.html" class="single-image picture video">--%>
+								<%--<img src="images/temp/thumb-4.jpg" alt="" />--%>
+							<%--</a>--%>
 
-						<li>
-							<a href="one-products.html" class="single-image picture video">
-								<img src="images/temp/thumb-4.jpg" alt="" />
-							</a>
+							<%--<a href="one-products.html" class="list-meta">--%>
+								<%--<h6 class="title-list-item">2009 Aston Martin DB9</h6>--%>
+							<%--</a>--%>
 
-							<a href="one-products.html" class="list-meta">
-								<h6 class="title-list-item">2009 Aston Martin DB9</h6>
-							</a>
+							<%--<div class="detailed">--%>
+								<%--<span class="cost">$8.966</span>--%>
+								<%--<span>1.4i TS 5Dr</span> <br />--%>
+								<%--<b>23000 Miles</b>--%>
+							<%--</div><!--/ .detailed-->--%>
 
-							<div class="detailed">
-								<span class="cost">$8.966</span>
-								<span>1.4i TS 5Dr</span> <br />
-								<b>23000 Miles</b>
-							</div><!--/ .detailed-->
+							<%--<a href="one-products.html" class="button orange">Details</a>--%>
+							<%--<label class="compare"><input type="checkbox" />Compare</label>--%>
 
-							<a href="one-products.html" class="button orange">Details</a>
-							<label class="compare"><input type="checkbox" />Compare</label>
-
-						</li>
+						<%--</li>--%>
 
 					</ul><!--/ .recent-list-cars-->
 

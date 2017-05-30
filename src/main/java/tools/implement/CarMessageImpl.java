@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import repository.CarRepository;
 import tools.CarMessage;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,8 +29,8 @@ public class CarMessageImpl implements CarMessage{
     @Override
     public List<CarEntity> getFrontSixCar(int n) {
         List<CarEntity> allCar = carRepository.findAll();
-        List<CarEntity> frontSixCar =null;
-        for (int i=0;i<n;i++) {
+        List<CarEntity> frontSixCar = new ArrayList<CarEntity>();
+        for (int i=allCar.size()-1;i>=allCar.size()-n&&i>=0;i--) {
             frontSixCar.add(allCar.get(i));
         }
         return frontSixCar;

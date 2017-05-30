@@ -16,6 +16,8 @@ import java.util.List;
  */
 
 public interface CarRepository extends JpaRepository<CarEntity, Integer> {
+    @Query("from  CarEntity  car where cId = :cId")
+    public CarEntity queryCarById(@Param("cId")int cId);
     @Query("from CarEntity car where cName=:cName")
     public List<CarEntity> queryCarByName(@Param("cName")String cName);
     @Query("from CarEntity car where cBand=:cBand")
@@ -31,8 +33,8 @@ public interface CarRepository extends JpaRepository<CarEntity, Integer> {
     //按条件查询汽车
     @Query("from CarEntity  car where car.cBand=:cBand and car.cType=:cType and " +
             "car.cPrice>=:minPrice and car.cPrice<=:maxPrice ")
-    public List<CarEntity> queryCarByCondition(String cBand
-    ,String minPrice,String maxPrice, String cType);
+    public List<CarEntity> queryCarByCondition(@Param("cBand") String cBand
+    ,@Param("minPrice") int minPrice,@Param("maxPrice") int maxPrice, @Param("cType") String cType);
 
 
     @Modifying      // 说明该方法是修改操作
@@ -41,6 +43,6 @@ public interface CarRepository extends JpaRepository<CarEntity, Integer> {
     // @Param注解用于提取参数
     @Query("update CarEntity us set us.cName=:cName, us.cBand=:cBand, us.cColor=:cColor, us.cPrice=:cPrice, us.cType=:cType where us.cId=:cId")
     public void updateUser(@Param("cName") String cName, @Param("cBand") String cBand,
-                           @Param("cColor") String cColor, @Param("cPrice") String cPrice , @Param("cType") String cType, @Param("cId") Integer cId);
+                           @Param("cColor") String cColor, @Param("cPrice") int cPrice , @Param("cType") String cType, @Param("cId") Integer cId);
 
 }
