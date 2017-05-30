@@ -30,73 +30,78 @@
 
 	<header id="header" class="clearfix">
 
-		<a href="index.html" id="logo"><img src="images/logo.png" alt="Car Dealer" /></a>
+        <a href="index.html" id="logo"><img src="images/logo.png" alt="Car Dealer" /></a>
 
-		<div class="widget-container widget_search">
+        <div class="widget-container widget_search">
 
-			<span class="call"><span>+1 234</span> 567-8901</span><br />
+            <li class="adds">
+                <c:if test="${!empty sessionScope.user}">
+                    <a href="" style="color: #ab8071">${sessionScope.user["uName"]}</a>
+                    欢迎您!
+                </c:if>
 
-			<span class="adds">12 Street, Los Angeles, CA, 94101</span>
+                <span  id="user_name_text"></span>
+            </li>
 
-			<form action="#" id="searchform" method="get" />
+            <form action="#" id="searchform" method="get" />
 
-				<p>
-					<input type="text" id="s" placeholder="Search" />
-					<button type="submit" id="searchsubmit"></button>
-				</p>
+            <p>
+                <input type="text" id="s" placeholder="搜索" />
+                <button type="submit" id="searchsubmit" ></button>
+            </p>
 
-			</form><!--/ #searchform-->
+            </form><!--/ #searchform-->
 
-		</div><!--/ .widget-container-->
+        </div><!--/ .widget-container-->
 
 		<nav id="navigation" class="navigation">
 
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li class="current-menu-item"><a href="all-listings.html">Browse By</a>
-					<ul>
-						<li class="current-menu-item"><a href="all-listings.html">All Listings</a></li>
-						<li><a href="#">Manufacturer</a>
-							<ul>
-								<li><a href="one-products.html">Aston Martin</a></li>
-								<li><a href="one-products.html">Audi</a></li>
-								<li><a href="one-products.html">BMW</a></li>
-								<li><a href="one-products.html">Chevrolet</a></li>
-								<li><a href="one-products.html">Mercedes Benz</a></li>
-								<li><a href="one-products.html">Ferrari</a></li>
-								<li><a href="one-products.html">Lexus</a></li>
-								<li><a href="one-products.html">Porsche</a></li>
-								<li><a href="one-products.html">Toyota</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Body Type</a></li>
-						<li><a href="#">Engine Size</a></li>
-						<li><a href="#">Mileage</a></li>
-						<li><a href="#">Model Year</a></li>
-						<li><a href="#">Price Range</a></li>
-						<li><a href="#">Transmission</a></li>
-					</ul>
-				</li>
-				<li><a href="blog.html">Blog</a>
-					<ul>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="blog-single.html">Blog Single</a></li>
-					</ul>
-				</li>
-				<li><a href="alternative-blog.html">News</a></li>
-				<li><a href="sales-reps.html">Sales Reps</a></li>
-				<li><a href="compare-listings.html">Pages</a>
-					<ul>
-						<li><a href="compare-listings.html">Compare Listings</a></li>
-						<li><a href="404.html">404 Page</a></li>
-						<li><a href="image-and-floats.html">Images and Floats</a></li>
-						<li><a href="pricing-table.html">Pricing Tables</a></li>
-						<li><a href="typography.html">Typography</a></li>
-						<li><a href="../../../toggle.html">FAQ Toggle</a></li>
-						<li><a href="columns.html">Column Layout</a></li>
-					</ul>
-				</li>
-				<li><a href="contact.html">Contacts</a></li>
+                <li class="current-menu-item"><a href="index.html">首页</a></li>
+                <li class="current-menu-item"><a href="all-listings.html">浏览</a>
+                    <ul>
+                        <li class="current-menu-item"><a href="all-listings.html">所有列表</a></li>
+                        <li><a href="#">厂商</a>
+                            <ul>
+                                <li><a href="one-products.html">阿斯顿马丁</a></li>
+                                <li><a href="one-products.html">奥迪</a></li>
+                                <li><a href="one-products.html">宝马</a></li>
+                                <li><a href="one-products.html">雪佛兰</a></li>
+                                <li><a href="one-products.html">梅赛德斯奔驰</a></li>
+                                <li><a href="one-products.html">法拉利</a></li>
+                                <li><a href="one-products.html">雷克萨斯</a></li>
+                                <li><a href="one-products.html">保时捷</a></li>
+                                <li><a href="one-products.html">丰田</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">车型</a></li>
+                        <li><a href="#">发动机尺寸</a></li>
+                        <li><a href="#">公里数</a></li>
+                        <li><a href="#">年型</a></li>
+                        <li><a href="#">价格幅度</a></li>
+                        <li><a href="#">传动装置</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">博客</a>
+                    <ul>
+                        <li><a href="blog.html">博客</a></li>
+                        <li><a href="blog-single.html">博客</a></li>
+                    </ul>
+                </li>
+                <li><a href="alternative-blog.html">新闻</a></li>
+                <li><a href="sales-reps.html">价格报道</a></li>
+                <li><a href="compare-listings.html">页面</a>
+                    <ul>
+                        <li><a href="compare-listings.html">比较列表</a></li>
+                        <li><a href="404.html">404页面</a></li>
+                        <li><a href="image-and-floats.html">图片</a></li>
+                        <li><a href="pricing-table.html">价格表</a></li>
+                        <li><a href="typography.html">排版</a></li>
+                        <li><a href="../../../toggle.html">FAQ 标签</a></li>
+                        <li><a href="columns.html">栅格布局</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">联系我们</a></li>
 			</ul>
 
 		</nav><!--/ #navigation-->
@@ -118,7 +123,7 @@
 
 				<div class="recent-list-cars">
 
-					<h3 class="widget-title"><span>Recent</span> Automobiles</h3>
+					<h3 class="widget-title"><span>所有</span>搜索结果</h3>
 
 					<ul class="recent-list-cars clearfix">
 					<c:forEach items="${allSearchCar}" var="car">
@@ -325,139 +330,121 @@
 			<aside id="sidebar" class="four columns">
 
 
-				<div class="widget-container widget_custom_search">
+                <div class="widget_custom_search">
 
-					<h3 class="widget-title">Quick Search</h3>
+                    <h3 class="widget-title">快捷搜索</h3>
 
-					<form action="/" id="boxpanel" class="form-panel" />
+                    <form action="/quickSearch" id="boxpanel" class="form-panel" />
 
-						<fieldset>
-							<label for="manufacturer">Manufacturer:</label>
-							<select id="manufacturer" name="manufacturer">
-								<option value="0" />Any
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
+                    <fieldset>
+                        <label for="manufacturer">厂商:</label>
+                        <select id="manufacturer" name="manufacturer">
+                            <c:forEach items="${allBank}" var="bank">
+                                <option value="${bank}" name="${bank}"/>${bank}
+                                <%--<option value="1" />宝马--%>
+                                <%--<option value="2" />奥迪--%>
+                            </c:forEach>
+                        </select>
+                    </fieldset>
 
-						<fieldset>
-							<label for="minprice">Min Price:</label>
-							<select id="minprice" name="minprice">
-								<option value="0" />No min
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
+                    <fieldset>
+                        <label for="minprice">最低价:</label>
+                        <select id="minprice" name="minprice">
+                            <option value="1" />￥10000
+                            <option value="50" />￥500000
+                        </select>
+                    </fieldset>
 
-						<fieldset>
-							<label for="maxprice">Max Price:</label>
-							<select id="maxprice" name="maxprice">
-								<option value="0" />No max
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
+                    <fieldset>
+                        <label for="maxprice">最高价：</label>
+                        <select id="maxprice" name="maxprice">
+                            <option value="100" />1000000
+                            <option value="500" />5000000
+                        </select>
+                    </fieldset>
 
-						<fieldset>
-							<label for="trans">Trans:</label>
-							<select id="trans" name="trans">
-								<option value="0" />Any
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
+                    <fieldset>
+                        <label for="bodytype">车型:</label>
+                        <select id="bodytype" name="type">
+                            <c:forEach items="${allCarType}" var="carType">
+                                <option value="${carType}" name="${carType}"/>${carType}
+                                <%--<option value="1" />宝马--%>
+                                <%--<option value="2" />奥迪--%>
+                            </c:forEach>
+                        </select>
+                    </fieldset>
 
-						<fieldset>
-							<label for="mileage">Mileage:</label>
-							<select id="mileage" name="mileage">
-								<option value="0" />Any
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
+                    <div class="clear"></div>
+                    <button id="submitSearch" class="submit-search" type="submit">搜索</button>
 
-						<fieldset>
-							<label for="bodytype">Body Type:</label>
-							<select id="bodytype" name="bodytype">
-								<option value="0" />Any
-								<option value="1" />Lorem
-								<option value="2" />Ipsum
-							</select>
-						</fieldset>
+                    </form><!--/ .form-panel-->
 
-						<div class="clear"></div>
-						<button id="submitSearch" class="submit-search" type="submit">Search</button>
-
-					</form><!--/ .form-panel-->
-
-				</div><!--/ .widget-container-->
+                </div><!--/ .main-search-panel-->
 
 
-				<div class="widget-container widget_loan_calculator">
+                <div class="widget-container widget_loan_calculator">
 
-					<div class="widget-head">
+                    <div class="widget-head">
+                        <h3 class="widget-title">贷款计算器</h3>
+                    </div>
 
-						<h3 class="widget-title">Loan Calculator</h3>
+                    <div class="entry-loan">
 
-					</div>
+                        <table>
+                            <tr>
+                                <td><label for="loan_amount">贷款额</label></td>
+                                <td><input id="loan_amount" type="text" value="0.00" /></td>
+                                <td>$</td>
+                            </tr>
+                            <tr>
+                                <td><label for="payment">预付定金</label></td>
+                                <td><input id="payment" type="text" value="0.00" /></td>
+                                <td>$</td>
+                            </tr>
+                            <tr>
+                                <td><label for="rate">年付</label></td>
+                                <td><input id="rate" type="text" value="0.00" /></td>
+                                <td>%</td>
+                            </tr>
+                            <tr>
+                                <td><label for="term">期限</label></td>
+                                <td><input id="term" type="text" value="0.00" /></td>
+                                <td>Yrs</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a id="buttonCalculate" href="#" class="button orange">计算</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="payments">支付</label></td>
+                                <td><input id="payments" type="text" value="0.00" /></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><label for="mpayment">每月支付</label></td>
+                                <td><input id="mpayment" type="text" value="0.00" /></td>
+                                <td>$</td>
+                            </tr>
+                        </table>
 
-					<div class="entry-loan">
+                    </div><!--/ .entry-loan-->
 
-						<table>
-							<tr>
-								<td><label for="loan_amount">Loan Amount</label></td>
-								<td><input id="loan_amount" type="text" value="0.00" /></td>
-								<td>$</td>
-							</tr>
-							<tr>
-								<td><label for="payment">Down Payment</label></td>
-								<td><input id="payment" type="text" value="0.00" /></td>
-								<td>$</td>
-							</tr>
-							<tr>
-								<td><label for="rate">Annual Rate</label></td>
-								<td><input id="rate" type="text" value="0.00" /></td>
-								<td>%</td>
-							</tr>
-							<tr>
-								<td><label for="term">Term</label></td>
-								<td><input id="term" type="text" value="0.00" /></td>
-								<td>Yrs</td>
-							</tr>
-							<tr>
-								<td>
-									<a id="buttonCalculate" href="#" class="button orange">Calculate</a>
-								</td>
-							</tr>
-							<tr>
-								<td><label for="payments">Payments</label></td>
-								<td><input id="payments" type="text" value="0.00" /></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><label for="mpayment">Monthly Payment</label></td>
-								<td><input id="mpayment" type="text" value="0.00" /></td>
-								<td>$</td>
-							</tr>
-						</table>
+                </div><!--/ .widget-container-->
 
-					</div><!--/ .entry-loan-->
+                <div class="widget-container widget_recent_entries">
 
-				</div><!--/ .widget-container-->
+                    <h3 class="widget-title">最新车闻</h3>
 
-				<div class="widget-container widget_recent_entries">
+                    <ul>
+                        <li><a href="#">降价榜:蒙迪欧降至15.48万</a></li>
+                        <li><a href="#">吉利远景X1上市3.99万起</a></li>
+                        <li><a href="#">优惠:2017款奥迪Q5直降7万</a></li>
+                    </ul>
 
-					<h3 class="widget-title">Recent News</h3>
+                    <a href="#" class="see">查看所有新闻</a>
 
-					<ul>
-						<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing</a></li>
-						<li><a href="#">Ipsum dolor sit amet, consectetur adipisicing</a></li>
-						<li><a href="#">Set magna ipsum dolor sit amet, consectetur adipisicing</a></li>
-					</ul>
-
-					<a href="#" class="see">See all news</a>
-
-				</div><!--/ .widget-container-->
+                </div><!--/ .widget-container-->
 
 			</aside><!--/ #sidebar-->
 
@@ -480,7 +467,7 @@
 
 			<div class="adjective clearfix">
 
-				<p class="copyright">Copyright &copy; 2013. ThemeMakers. All rights reserved.Collect from <a href="http://www.777moban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                <p class="copyright">版权所有 &copy; 2017. 内蒙古大学. 技术支持 <a href="http://www.imudges.com/" title="网页模板" target="_blank">IMUDGES</a></p>
 
 			</div><!--/ .adjective-->
 
@@ -494,30 +481,30 @@
 
 <div class="account-wrapper">
 
-	<form class="form-reg" method="post" action="" />
+    <form class="form-reg" method="post" action="/user/dologin" />
 
-		<a href="#" class="log">Login</a>
+    <a href="#" class="log">登陆</a>
 
-		<p>
-			<label>Username*</label>
-			<input class="input-medium" type="text" />
-		</p>
+    <p>
+        <label>用户名*</label>
+        <input class="input-medium" type="text" name="username"/>
+    </p>
 
-		<p>
-			<label>Password*</label>
-			<input class="input-medium" type="password" />
-		</p>
+    <p>
+        <label>密码*</label>
+        <input class="input-medium" type="password" name="password" />
+    </p>
 
-		<p class="forgot-pass">
-			<a href="#">Forgot your password?</a>
-		</p>
+    <p class="forgot-pass">
+        <a href="#">忘记密码？</a>
+    </p>
 
-		<p>
-			<a href="#" class="button dark enter-btn">Login</a>
-			<a href="#" class="button dark enter-btn">Create an account</a>
-		</p>
+    <p>
+        <input type="submit" class="button dark enter-btn" value="Login" >
+        <a href="/user/register" class="button dark enter-btn">立即创建账户！</a>
+    </p>
 
-	</form><!--/ .form-reg-->
+    </form><!--/ .form-reg-->
 
 </div><!--/ .account-wrapper-->
 

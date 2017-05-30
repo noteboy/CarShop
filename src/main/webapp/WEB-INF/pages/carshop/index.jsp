@@ -58,7 +58,7 @@
 		<nav id="navigation" class="navigation">
 
 			<ul>
-				<li class="current-menu-item"><a href="index.html"></a></li>
+				<li class="current-menu-item"><a href="index.html">首页</a></li>
 				<li><a href="all-listings.html">浏览</a>
 					<ul>
 						<li><a href="all-listings.html">所有列表</a></li>
