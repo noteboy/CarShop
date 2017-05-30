@@ -197,7 +197,7 @@
 						</ul>
 
 						<c:if test="${!empty sessionScope.user}">
-							<button href="#0" class="button button-caution button-box button-jumbo add-button" data-price="${Car.cPrice}" data-proid="${Car.cId}" data-proname="${Car.cName}" data-proimg="${Car.imgurl}">添加到购物车</button>
+							<button href="#0" class="button button-caution button-box button-jumbo add-button" data-price="${Car.cPrice}" data-proid="4" data-proname="${Car.cName}" data-proimg="${Car.imgurl}">添加到购物车</button>
 						</c:if>
 						<c:if test="${empty sessionScope.user}">
 							<button href="#0" class="button button-caution button-box button-jumbo" onclick="Alert()" >添加到购物车</button>
@@ -230,7 +230,7 @@
 						<h3 class="section-title">车辆信息</h3>
 
 						<p>
-							法拉利（Ferrari）是一家意大利汽车生产商，1929年由恩佐·法拉利（Enzo Ferrari）创办，
+							奥迪${Car.cName}是一家意大利汽车生产商，1929年由恩佐·法拉利（Enzo Ferrari）创办，
 							主要制造一级方程式赛车、赛车及高性能跑车。法拉利是世界闻名的赛车和运动跑车的生产厂家，
 							早期的法拉利赞助赛车手及生产赛车，1947年独立生产汽车。菲亚特（FIAT）拥有法拉利90%的股权，
 							但法拉利却能独立于菲亚特运营。法拉利汽车大部分采用手工制造，产量很低，截至2011年法拉利共交付7195台新车，
@@ -238,7 +238,7 @@
 						</p>
 
 						<p>
-							法拉利F12 Berlinetta是新一代的前置6.3升 V12动力车款，车头设计将与FF系出同门，经由在风洞中精雕细琢的车身造型，
+							奥迪${Car.cName}是新一代的前置6.3升 V12动力车款，车头设计将与FF系出同门，经由在风洞中精雕细琢的车身造型，
 							车这款全新法拉利12缸跑车从静止加速到100km/h只需3.1秒，而0-200km/h仅需8.5秒。最大马力达到740Ps，最大功率740马力/8000rpm，最高时速将达到350km/h。
 						</p>
 
@@ -697,7 +697,7 @@
             <c:if test="${empty sessionScope.user}">
           alert("请先登录！");
         </c:if>
-    }
+    };
     jQuery(document).ready(function($) {
         var cartWrapper = $('.cd-cart-container');
         //product id - you don't need a counter in your real project but you can use your real product id
