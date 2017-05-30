@@ -9,7 +9,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-	<title>Car Dealer | One Products</title>
+	<title>汽车商城 | ${Car.cName}车辆信息</title>
 
 	<meta name="description" content="" />
 	<meta name="author" content="" />
@@ -625,27 +625,27 @@
 
 <div class="account-wrapper">
 
-	<form class="form-reg" method="post" action="" />
+	<form class="form-reg" method="post" action="/user/dologin" />
 
-	<a href="#" class="log" style="width: 70px">Login</a>
+	<a href="#" class="log" style="width: 70px">登陆</a>
 
 	<p>
-		<label>Username*</label>
-		<input class="input-medium" type="text" />
+		<label>用户名*</label>
+		<input class="input-medium" type="text" name="username"/>
 	</p>
 
 	<p>
-		<label>Password*</label>
-		<input class="input-medium" type="password" />
+		<label>密码*</label>
+		<input class="input-medium" type="password" name="password" />
 	</p>
 
 	<p class="forgot-pass">
-		<a href="#">Forgot your password?</a>
+		<a href="#">忘记密码？</a>
 	</p>
 
 	<p>
-		<a href="#" class="button dark enter-btn">Login</a>
-		<a href="#" class="button dark enter-btn">Create an account</a>
+		<input type="submit" class="button dark enter-btn" value="Login" >
+		<a href="/user/register" class="button dark enter-btn">立即创建账户！</a>
 	</p>
 
 	</form><!--/ .form-reg-->

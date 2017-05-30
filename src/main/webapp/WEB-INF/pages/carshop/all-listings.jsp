@@ -9,7 +9,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-	<title>Car Dealer | All Listings</title>
+	<title>汽车商城 | 搜索结果</title>
 
 	<meta name="description" content="" />
 	<meta name="author" content="" />
