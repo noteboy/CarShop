@@ -12,6 +12,8 @@ public class ShopcarEntity {
     private String createTime;
     private int number;
     private int totalPrice;
+    private int uId;
+    private int cId;
 
     @Id
     @Column(name = "sc_id", nullable = false)
@@ -75,5 +77,25 @@ public class ShopcarEntity {
         result = 31 * result + number;
         result = 31 * result + totalPrice;
         return result;
+    }
+
+    @Basic
+    @Column(name = "u_id", nullable = false)
+    public int getuId() {
+        return uId;
+    }
+
+    public void setuId(int uId) {
+        this.uId = uId;
+    }
+
+    @Basic
+    @Column(name = "c_id", nullable = false)
+    public int getcId() {
+        return cId;
+    }
+
+    public void setcId(int cId) {
+        this.cId = cId;
     }
 }

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>用户管理</title>
+    <title>汽车管理</title>
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -26,14 +26,12 @@
 
     <h3>所有汽车信息 <a href="/admin/cars/add" type="button" class="btn btn-primary btn-sm">添加</a></h3>
 
-    <!-- 如果用户列表为空 -->
     <c:if test="${empty carList}">
         <div class="alert alert-warning" role="alert">
-            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>User表为空，请<a href="/admin/users/add" type="button" class="btn btn-primary btn-sm">添加</a>
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>Car表为空，请<a href="/admin/cars/add" type="button" class="btn btn-primary btn-sm">添加</a>
         </div>
     </c:if>
 
-    <!-- 如果用户列表非空 -->
     <c:if test="${!empty carList}">
         <table class="table table-bordered table-striped">
             <tr>
@@ -54,7 +52,7 @@
                     <td>${car.cType}</td>
                     <td>${car.cBand}</td>
                     <td>${car.cColor}</td>
-                    <td><img src="${car.imgurl}"></td>
+                    <td><a><img src="${car.imgurl}" alt=""/></a></td>
                     <td>
                         <a href="/admin/cars/show/${car.cId}" type="button" class="btn btn-sm btn-success">详情</a>
                         <a href="/admin/cars/update/${car.cId}" type="button" class="btn btn-sm btn-warning">修改</a>

@@ -35,16 +35,26 @@ public class MainController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(ModelMap modelMap) {
-        List<UserEntity> userList = userRepository.findAll();
-        modelMap.addAttribute("userList", userList);
-        return "index";
+        List<String> carBank = carMessage.getBankType();
+        System.out.println("汽车的品牌个数："+carBank.size());
+        List<String> carType = carMessage.getCarType();
+        List<CarEntity> frontSixCar = carMessage.getFrontSixCar(6);
+        modelMap.addAttribute("allBank",carBank);//添加数据库商标的类型
+        modelMap.addAttribute("allCarType",carType);//汽车类型
+        modelMap.addAttribute("frontSixCar",frontSixCar);//前六个汽车
+        return "carshop/index";
     }
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index2(ModelMap modelMap) {
-        List<UserEntity> userList = userRepository.findAll();
-        modelMap.addAttribute("userList", userList);
-        return "index";
+        List<String> carBank = carMessage.getBankType();
+        System.out.println("汽车的品牌个数："+carBank.size());
+        List<String> carType = carMessage.getCarType();
+        List<CarEntity> frontSixCar = carMessage.getFrontSixCar(6);
+        modelMap.addAttribute("allBank",carBank);//添加数据库商标的类型
+        modelMap.addAttribute("allCarType",carType);//汽车类型
+        modelMap.addAttribute("frontSixCar",frontSixCar);//前六个汽车
+        return "carshop/index";
     }
 
     @RequestMapping(value = "/admin/user/users", method = RequestMethod.GET)
@@ -109,8 +119,14 @@ public class MainController {
     ModelMap modelMap ){
         List<CarEntity> allSearchCar = carService.queryCarByCondition(manufacturer,Integer.parseInt(minprice),
                 Integer.parseInt(maxprice),type);
+        System.out.print(manufacturer);
         modelMap.addAttribute("allSearchCar",allSearchCar);
-        System.out.println(allSearchCar.size());
+        List<String> carBank = carMessage.getBankType();
+        //System.out.println("汽车的品牌个数："+carBank.size());
+        List<String> carType = carMessage.getCarType();
+        modelMap.addAttribute("allBank",carBank);//添加数据库商标的类型
+        modelMap.addAttribute("allCarType",carType);//汽车类型
+
         return "carshop/all-listings";
     }
 }

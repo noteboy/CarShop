@@ -49,6 +49,10 @@
             <th>Type</th>
             <td>${car.cType}</td>
         </tr>
+        <tr>
+            <th>Img</th>
+            <td><img src="${car.imgurl}" alt=""/></td>
+        </tr>
     </table>
 </div>
 

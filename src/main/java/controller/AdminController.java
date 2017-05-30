@@ -106,8 +106,11 @@ public class AdminController {
     @RequestMapping(value = "/admin/cars/addP", method = RequestMethod.POST)
     public String addcarPost(@ModelAttribute("car") CarEntity carEntity) {
 
+        //String a = "C:/Users/liuxiaolong/Documents/github/CarShop/src/main/webapp/carimagurl/" + carEntity.getImgurl();
+        String a ="http://localhost:8080/carimagurl/" + carEntity.getImgurl();
+        carEntity.setImgurl(a);
         carServicelmpl.addCar(carEntity);
-        return "redirect:/admin/user/users";
+        return "redirect:/admin/car/cars";
     }
 
     @RequestMapping(value = "/admin/cars/update/{id}", method = RequestMethod.GET)
@@ -120,6 +123,8 @@ public class AdminController {
     @RequestMapping(value = "/admin/cars/updateP", method = RequestMethod.POST)
     public String updateCarPost(@ModelAttribute("carP") CarEntity car) {
 
+        String s = "C:\\Users\\liuxiaolong\\Documents\\github\\CarShop\\src\\main\\webapp\\carimagurl\\" + car.getImgurl();
+        car.setImgurl(s);
         carServicelmpl.updateCar(car);
         return "redirect:/admin/car/cars";
     }

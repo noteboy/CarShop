@@ -48,7 +48,7 @@ public class CarServicelmpl implements CarService{
     }
 
     public void updateCar(CarEntity car){
-        carRepository.updateUser(car.getcName(),car.getcBand(),car.getcColor(),car.getcPrice(),car.getcType(),car.getcId());
+        carRepository.updateCar(car.getcName(),car.getcBand(),car.getcColor(),car.getcPrice(),car.getcType(),car.getcId());
     }
 
     @Override

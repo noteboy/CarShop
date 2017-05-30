@@ -42,7 +42,7 @@ public interface CarRepository extends JpaRepository<CarEntity, Integer> {
     // 定义查询
     // @Param注解用于提取参数
     @Query("update CarEntity us set us.cName=:cName, us.cBand=:cBand, us.cColor=:cColor, us.cPrice=:cPrice, us.cType=:cType where us.cId=:cId")
-    public void updateUser(@Param("cName") String cName, @Param("cBand") String cBand,
+    public void updateCar(@Param("cName") String cName, @Param("cBand") String cBand,
                            @Param("cColor") String cColor, @Param("cPrice") int cPrice , @Param("cType") String cType, @Param("cId") Integer cId);
 
 }

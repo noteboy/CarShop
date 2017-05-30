@@ -52,7 +52,7 @@
         </div>
         <div class="form-group">
             <label for="imgurl">imgurl:</label>
-            <input type="text" class="form-control" id="imgurl" name="imgurl" placeholder="Enter imgurl:"
+            <input type="file" class="form-control" id="imgurl" name="imgurl" placeholder="Enter imgurl:"
                    value="${car.imgurl}"/>
         </div>
         <!-- 把 id 一并写入 userP 中 -->
