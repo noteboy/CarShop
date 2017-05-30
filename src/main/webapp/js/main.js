@@ -81,9 +81,9 @@ jQuery(document).ready(function($) {
         var cartIsEmpty = cartWrapper.hasClass('empty');
         //update cart product list
         var price = trigger.data('price'),
-                proname = trigger.data('proname'),
-                proid = trigger.data('proid'),
-                proimg = trigger.data('proimg');
+            proname = trigger.data('proname'),
+            proid = trigger.data('proid'),
+            proimg = trigger.data('proimg');
         addProduct(proname, proid, price, proimg);
         //console.log();
 
