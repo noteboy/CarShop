@@ -54,4 +54,36 @@ public class UserServiceImpl implements UserService {
             car=carRepository.findAll();
         return car;
     }
+
+
+    public List<UserEntity> queryAllUser() {
+        List<UserEntity> user = null;
+        user = userRepository.findAll();
+        return user;
+    }
+
+
+    public UserEntity querySingleUser(int id){
+        UserEntity singleuser = null;
+        singleuser = userRepository.findOne(id);
+        return singleuser;
+    }
+
+    public void deleteUser(int id){
+        userRepository.delete(id);
+        userRepository.flush();
+    }
+
+    public void addUser(UserEntity userEntity){
+        userRepository.saveAndFlush(userEntity);
+
+    }
+
+    public void updateUser(UserEntity user){
+        userRepository.updateUser(user.getuName(),user.getuName(),user.getuPassword(),user.getuTellphone(),user.getuId());
+        userRepository.flush();
+    }
+
+
+
 }

@@ -5,18 +5,22 @@ package controller;
  */
 
 
+import model.AdministratorEntity;
 import model.CarEntity;
+import model.ShopcarEntity;
 import model.UserEntity;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import repository.UserRepository;
 import service.CarService;
+import service.ShopcarService;
+import service.UserService;
 import tools.CarMessage;
-
+import java.util.Date;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
@@ -25,13 +29,17 @@ import java.util.List;
 @Controller
 public class MainController {
 
-    @Autowired
-    UserRepository userRepository;
+
     @Autowired
     CarMessage carMessage;
 
     @Autowired
     CarService carService;
+    @Autowired
+    UserService userService;
+    @Autowired
+    ShopcarService shopcarService;
+
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(ModelMap modelMap) {
@@ -59,36 +67,22 @@ public class MainController {
 
     @RequestMapping(value = "/admin/user/users", method = RequestMethod.GET)
     public String getUsers(ModelMap modelMap) {
-        // 查询user表中所有记录
-        List<UserEntity> userList = userRepository.findAll();
-
-        // 将所有记录传递给要返回的jsp页面，放在userList当中
+        List<UserEntity> userList = userService.queryAllUser();
         modelMap.addAttribute("userList", userList);
-
-        // 返回pages目录下的admin/users.jsp页面
         return "admin/user/users";
     }
 
-    // get请求，访问添加用户 页面
+
     @RequestMapping(value = "/admin/users/add", method = RequestMethod.GET)
     public String addUser() {
-        // 转到 admin/addUser.jsp页面
         return "admin/user/addUser";
     }
 
-    // post请求，处理添加用户请求，并重定向到用户管理页面
     @RequestMapping(value = "/admin/users/addP", method = RequestMethod.POST)
     public String addUserPost(@ModelAttribute("user") UserEntity userEntity) {
-        // 注意此处，post请求传递过来的是一个UserEntity对象，里面包含了该用户的信息
-        // 通过@ModelAttribute()注解可以获取传递过来的'user'，并创建这个对象
 
-        // 数据库中添加一个用户，该步暂时不会刷新缓存
-        //userRepository.save(userEntity);
+        userService.addUser(userEntity);
 
-        // 数据库中添加一个用户，并立即刷新缓存
-        userRepository.saveAndFlush(userEntity);
-
-        // 重定向到用户管理页面，方法为 redirect:url
         return "redirect:/admin/user/users";
     }
     @RequestMapping(value = "/carshop",method = RequestMethod.GET)
@@ -103,6 +97,32 @@ public class MainController {
         return "carshop/index";
     }
     @RequestMapping(value = "/details",method = RequestMethod.GET)
+    public String getDetails(String carId,ModelMap modelMap,String userId){
+        System.out.println("carId:" + carId);
+        CarEntity carEntity = carService.getCarById(Integer.parseInt(carId));
+        modelMap.addAttribute("Car",carEntity);
+        List<String> carBank = carMessage.getBankType();
+        //System.out.println("汽车的品牌个数："+carBank.size());
+        List<String> carType = carMessage.getCarType();
+        modelMap.addAttribute("allBank",carBank);//添加数据库商标的类型
+        modelMap.addAttribute("allCarType",carType);//汽车类型
+
+
+        ShopcarEntity shopcarEntity = new ShopcarEntity();
+        shopcarEntity.setcId(carEntity.getcId());
+        shopcarEntity.setNumber(1);
+        shopcarEntity.setTotalPrice(carEntity.getcPrice());
+        shopcarEntity.setuId(Integer.parseInt(userId));
+        shopcarEntity.setImgurl(carEntity.getImgurl());
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        shopcarEntity.setCreateTime(df.format(new Date()));
+        shopcarService.addCar(shopcarEntity);
+
+
+        return "carshop/one-products";
+    }
+
+    @RequestMapping(value = "/detail",method = RequestMethod.GET)
     public String getDetails(String carId,ModelMap modelMap){
         System.out.println("carId:" + carId);
         CarEntity carEntity = carService.getCarById(Integer.parseInt(carId));
@@ -112,8 +132,20 @@ public class MainController {
         List<String> carType = carMessage.getCarType();
         modelMap.addAttribute("allBank",carBank);//添加数据库商标的类型
         modelMap.addAttribute("allCarType",carType);//汽车类型
+
         return "carshop/one-products";
     }
+    @RequestMapping(value = "/deleteShopcar/{id}", method = RequestMethod.GET)
+    public String deleteCar(@PathVariable("id") Integer scId) {
+        ShopcarEntity shopcarEntity = shopcarService.qureyCarByScid(scId);
+        int userId = shopcarEntity.getuId();
+        shopcarService.deleteCar(scId);
+
+
+        return "redirect:/shopcars?userId=" + userId;
+    }
+
+
     @RequestMapping(value = "/quickSearch",method = RequestMethod.GET)
     public String quickSearch(String manufacturer,String minprice,String maxprice,String type,
     ModelMap modelMap ){
@@ -129,4 +161,31 @@ public class MainController {
 
         return "carshop/all-listings";
     }
+
+
+
+    @RequestMapping(value = "/searchallcar",method = RequestMethod.GET)
+    public String Search(
+                              ModelMap modelMap ){
+        List<CarEntity> allSearchCar = carService.queryAllCar();
+
+        modelMap.addAttribute("allSearchCar",allSearchCar);
+        List<String> carBank = carMessage.getBankType();
+        //System.out.println("汽车的品牌个数："+carBank.size());
+        List<String> carType = carMessage.getCarType();
+        modelMap.addAttribute("allBank",carBank);//添加数据库商标的类型
+        modelMap.addAttribute("allCarType",carType);//汽车类型
+
+        return "carshop/all-listings";
+    }
+
+
+    @RequestMapping(value = "/shopcars",method = RequestMethod.GET)
+    public String shopcar(ModelMap modelMap,String userId){
+        List<ShopcarEntity>  shopcarList = shopcarService.qureyCarByUid(Integer.parseInt(userId));
+        modelMap.addAttribute("allSearchCar",shopcarList);
+        return "carshop/shopcar";
+    }
+
+
 }

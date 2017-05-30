@@ -37,7 +37,7 @@
 
 			<li class="adds">
 				<c:if test="${!empty sessionScope.user}">
-                 <a href="" style="color: #ab8071">${sessionScope.user["uName"]}</a>
+                 <a href="/updateself" style="color: #ab8071">${sessionScope.user["uName"]}</a>
 					欢迎您!
 				</c:if>
 
@@ -83,26 +83,24 @@
 						<li><a href="#">传动装置</a></li>
 					</ul>
 				</li>
-				<li><a href="blog.html">博客</a>
-					<ul>
-						<li><a href="blog.html">博客</a></li>
-						<li><a href="blog-single.html">博客</a></li>
-					</ul>
-				</li>
 				<li><a href="alternative-blog.html">新闻</a></li>
 				<li><a href="sales-reps.html">价格报道</a></li>
-				<li><a href="compare-listings.html">页面</a>
-					<ul>
-						<li><a href="compare-listings.html">比较列表</a></li>
-						<li><a href="404.html">404页面</a></li>
-						<li><a href="image-and-floats.html">图片</a></li>
-						<li><a href="pricing-table.html">价格表</a></li>
-						<li><a href="typography.html">排版</a></li>
-						<li><a href="../../../toggle.html">FAQ 标签</a></li>
-						<li><a href="columns.html">栅格布局</a></li>
-					</ul>
-				</li>
 				<li><a href="contact.html">联系我们</a></li>
+				<li>
+						<a href="/shopcars?userId=${sessionScope.user["uId"]}">查看购物车</a>
+				</li>
+				<li>
+					<c:if test="${user.uId == 2}">
+						<a href="/admin/car/cars">后台汽车信息管理</a>
+					</c:if>
+					<span  id="user_name_text"></span>
+				</li>
+				<li>
+					<c:if test="${user.uId == 2 }">
+						<a href="/admin/user/users">后台用户信息管理</a>
+					</c:if>
+					<span  id="user_name_text"></span>
+				</li>
 			</ul>
 
 		</nav><!--/ #navigation-->
@@ -301,114 +299,16 @@
 								<span>${car.cBand}</span> <br />
 							</div><!--/ .detailed-->
 
-							<a href="/details?carId=${car.cId}" class="button orange">详情</a>
+							<a href="/details?carId=${car.cId}&userId=${user.uId}" class="button orange">详情</a>
 							<%--<label class="compare"><input type="checkbox" />比较</label>--%>
 
 						</li>
 					</c:forEach>
-						<%--<li>--%>
-							<%--<a href="#" class="single-image picture video">--%>
-								<%--<img src="images/temp/thumb-2.jpg" alt="" />--%>
-							<%--</a>--%>
 
-							<%--<a href="#" class="list-meta">--%>
-								<%--<h6 class="title-list-item">2009 款阿斯顿马丁 DB9</h6>--%>
-							<%--</a>--%>
-
-							<%--<div class="detailed">--%>
-								<%--<span class="cost">￥8.966</span>--%>
-								<%--<span>1.4i TS 5Dr发动机</span> <br />--%>
-								<%--<b>23000 公里</b>--%>
-							<%--</div><!--/ .detailed-->--%>
-
-							<%--<a href="#" class="button orange">详情</a>--%>
-							<%--<label class="compare"><input type="checkbox" />比较</label>--%>
-
-						<%--</li>--%>
-
-						<%--<li>--%>
-							<%--<a href="#" class="single-image picture">--%>
-								<%--<img src="images/temp/thumb-3.jpg" alt="" />--%>
-							<%--</a>--%>
-
-							<%--<a href="#" class="list-meta">--%>
-								<%--<h6 class="title-list-item">2009 款阿斯顿马丁 DB9</h6>--%>
-							<%--</a>--%>
-
-							<%--<div class="detailed">--%>
-								<%--<span class="cost">￥8.966</span>--%>
-								<%--<span>1.4i TS 5Dr发动机</span> <br />--%>
-								<%--<b>23000 公里</b>--%>
-							<%--</div><!--/ .detailed-->--%>
-
-							<%--<a href="#" class="button orange">详情</a>--%>
-							<%--<label class="compare"><input type="checkbox" />比较</label>--%>
-
-						<%--</li>--%>
-
-						<%--<li>--%>
-							<%--<a href="#" class="single-image">--%>
-								<%--<img src="images/temp/no-thumb.jpg" alt="" />--%>
-							<%--</a>--%>
-
-							<%--<a href="#" class="list-meta">--%>
-								<%--<h6 class="title-list-item">2009 款阿斯顿马丁 DB9</h6>--%>
-							<%--</a>--%>
-
-							<%--<div class="detailed">--%>
-								<%--<span class="cost">￥8.966</span>--%>
-								<%--<span>1.4i TS 5Dr发动机</span> <br />--%>
-								<%--<b>23000 公里</b>--%>
-							<%--</div><!--/ .detailed-->--%>
-
-							<%--<a href="#" class="button orange">详情</a>--%>
-							<%--<label class="compare"><input type="checkbox" />比较</label>--%>
-
-						<%--</li>--%>
-
-						<%--<li>--%>
-							<%--<a href="#" class="single-image picture">--%>
-								<%--<img src="images/temp/thumb-4.jpg" alt="" />--%>
-							<%--</a>--%>
-
-							<%--<a href="#" class="list-meta">--%>
-								<%--<h6 class="title-list-item">2009 款阿斯顿马丁 DB9</h6>--%>
-							<%--</a>--%>
-
-							<%--<div class="detailed">--%>
-								<%--<span class="cost">￥8.966</span>--%>
-								<%--<span>1.4i TS 5Dr发动机</span> <br />--%>
-								<%--<b>23000 公里</b>--%>
-							<%--</div><!--/ .detailed-->--%>
-
-							<%--<a href="#" class="button orange">详情</a>--%>
-							<%--<label class="compare"><input type="checkbox" />比较</label>--%>
-
-						<%--</li>--%>
-
-						<%--<li>--%>
-							<%--<a href="#" class="single-image picture">--%>
-								<%--<img src="images/temp/thumb-5.jpg" alt="" />--%>
-							<%--</a>--%>
-
-							<%--<a href="#" class="list-meta">--%>
-								<%--<h6 class="title-list-item">2009 款阿斯顿马丁 DB9</h6>--%>
-							<%--</a>--%>
-
-							<%--<div class="detailed">--%>
-								<%--<span class="cost">￥8.966</span>--%>
-								<%--<span>1.4i TS 5Dr发动机</span> <br />--%>
-								<%--<b>23000 公里</b>--%>
-							<%--</div><!--/ .detailed-->--%>
-
-							<%--<a href="#" class="button orange">详情</a>--%>
-							<%--<label class="compare"><input type="checkbox" />比较</label>--%>
-
-						<%--</li>--%>
 
 					</ul>
 
-					<a href="#" class="see">查看所有款式汽车</a>
+					<a href="/searchallcar" class="see">查看所有款式汽车</a>
 
 				</div><!--/ .recent-list-cars-->
 

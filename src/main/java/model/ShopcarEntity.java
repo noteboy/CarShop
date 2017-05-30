@@ -14,6 +14,7 @@ public class ShopcarEntity {
     private int totalPrice;
     private int uId;
     private int cId;
+    private String imgurl;
 
     @Id
     @Column(name = "sc_id", nullable = false)
@@ -97,5 +98,15 @@ public class ShopcarEntity {
 
     public void setcId(int cId) {
         this.cId = cId;
+    }
+
+    @Basic
+    @Column(name = "imgurl", nullable = true, length = 100)
+    public String getImgurl() {
+        return imgurl;
+    }
+
+    public void setImgurl(String imgurl) {
+        this.imgurl = imgurl;
     }
 }

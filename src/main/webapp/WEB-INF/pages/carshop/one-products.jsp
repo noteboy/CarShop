@@ -197,10 +197,10 @@
 						</ul>
 
 						<c:if test="${!empty sessionScope.user}">
-							<button href="#0" class="button button-caution button-box button-jumbo add-button" data-price="${Car.cPrice}" data-proid="4" data-proname="${Car.cName}" data-proimg="${Car.imgurl}">添加到购物车</button>
+							<a href="/user/addtoshopcar?carId=${car.cId}&userId=${user.uId}" class="button button-caution button-box button-jumbo add-button" data-price="${Car.cPrice}" data-proid="4" data-proname="${Car.cName}" data-proimg="${Car.imgurl}">添加到购物车</a>
 						</c:if>
 						<c:if test="${empty sessionScope.user}">
-							<button href="#0" class="button button-caution button-box button-jumbo" onclick="Alert()" >添加到购物车</button>
+							<a href="/user/addtoshopcar?carId=${car.cId}&userId=${user.uId}" class="button button-caution button-box button-jumbo" onclick="Alert()" >添加到购物车</a>
 						</c:if>
 
 
@@ -717,13 +717,13 @@
 
             //add product to cart
             addToCartBtn.on('click', function(event) {
-                event.preventDefault();
+               // event.preventDefault();
                 addToCart($(this));
             });
 
             //open/close cart
             cartTrigger.on('click', function(event) {
-                event.preventDefault();
+                //event.preventDefault();
                 toggleCart();
             });
 
@@ -735,7 +735,7 @@
 
             //delete an item from the cart
             cartList.on('click', '.delete-item', function(event) {
-                event.preventDefault();
+                //event.preventDefault();
                 removeProduct($(event.target).parents('.product'));
             });
 
@@ -747,7 +747,7 @@
             //reinsert item deleted from the cart
             undo.on('click', 'a', function(event) {
                 clearInterval(undoTimeoutId);
-                event.preventDefault();
+                //event.preventDefault();
                 cartList.find('.deleted').addClass('undo-deleted').one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
                     $(this).off('webkitAnimationEnd oanimationend msAnimationEnd animationend').removeClass('deleted undo-deleted').removeAttr('style');
                     quickUpdateCart();

@@ -310,16 +310,6 @@
 
 				</div><!--/ .recent-list-cars-->
 
-				<div class="wp-pagenavi clearfix">
-
-					<span class="pages">Page 1 of 2</span>
-					<a class="prevpostslink" href="#"></a>
-					<span class="current">1</span>
-					<a class="page" href="#">2</a>
-					<a class="nextpostslink" href="#"></a>
-
-				</div><!--/ .wp-pagenavi-->
-
 			</section><!--/ #content-->
 
 			<!-- - - - - - - - - - - - - - end Content - - - - - - - - - - - - - - - - -->

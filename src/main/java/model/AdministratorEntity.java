@@ -10,6 +10,7 @@ import javax.persistence.*;
 public class AdministratorEntity {
     private int aId;
     private int uId;
+    private String uName;
 
     @Id
     @Column(name = "a_id", nullable = false)
@@ -46,5 +47,15 @@ public class AdministratorEntity {
 
     public void setuId(int uId) {
         this.uId = uId;
+    }
+
+    @Basic
+    @Column(name = "u_name", nullable = true, length = 40)
+    public String getuName() {
+        return uName;
+    }
+
+    public void setuName(String uName) {
+        this.uName = uName;
     }
 }

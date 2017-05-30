@@ -1,5 +1,6 @@
 package service;
 
+import model.AdministratorEntity;
 import model.CarEntity;
 import model.UserEntity;
 
@@ -19,4 +20,5 @@ public interface AdministratorService {
     public boolean revokeVip(UserEntity user);
     public boolean deleteUser(UserEntity user);
     public List<UserEntity> queryUser();
+    public AdministratorEntity loginA(int id);
 }
